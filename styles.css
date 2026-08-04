@@ -61,6 +61,8 @@ h2 { margin: 0; color: var(--navy); font-size: clamp(26px, 3.5vw, 43px); line-he
 .event-session { padding-left: 1.1em; }
 .entry-row { display: flex; align-items: center; justify-content: center; gap: 15px; padding-top: 9px; }
 .entry-row p { margin: 0; color: var(--muted); font-size: 14px; }
+.entry-note { margin-top: 8px; text-align: center; }
+.entry-note p { margin: 0; color: var(--muted); font-size: 13px; }
 button, .secondary-button { font: inherit; }
 .primary-button { min-width: 215px; padding: 10px 20px; color: #fff; background: linear-gradient(135deg, #078bd3, #075fae); border: 0; border-radius: 999px; box-shadow: 0 10px 25px rgba(4,113,186,.24); font-weight: 800; cursor: pointer; }
 .primary-button:hover { transform: translateY(-1px); filter: brightness(1.06); }
