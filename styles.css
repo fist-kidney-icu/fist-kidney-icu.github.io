@@ -102,7 +102,7 @@ button, .secondary-button { font: inherit; }
 .profile-role { margin: 0 0 24px; color: var(--blue); font-weight: 800; line-height: 1.8; }
 .profile-copy > p:not(.section-kicker):not(.profile-role) { color: #34546c; font-size: 17px; }
 .profile-back { margin-top: 14px; text-align: center; }
-.closing { margin-top: 90px; padding: 95px 20px; text-align: center; color: #fff; background: linear-gradient(135deg, #041c3d, #075c93 65%, #079fc0); }
+.closing { margin-top: 90px; padding: 60px 20px; text-align: center; color: #fff; background: linear-gradient(135deg, #041c3d, #075c93 65%, #079fc0); }
 .closing > p { margin: 0 0 30px; font-size: clamp(22px, 3.5vw, 38px); font-weight: 800; line-height: 1.7; }
 .closing-message span { display: block; }
 .secondary-button { display: inline-block; min-width: 220px; padding: 14px 26px; color: var(--navy); background: var(--sun); border-radius: 999px; text-decoration: none; font-weight: 800; }
@@ -292,8 +292,7 @@ img{max-width:100%;height:auto;}
   }
 
   .closing {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 48px 10px;
   }
 
   .closing > .closing-message {
@@ -303,7 +302,7 @@ img{max-width:100%;height:auto;}
   }
 
   .closing-message span {
-    white-space: nowrap;
+    white-space: normal;
   }
 
   footer {
@@ -408,5 +407,2455 @@ html {
     line-height: 1.6;
     letter-spacing: -0.035em;
     font-variant-numeric: tabular-nums;
+  }
+}
+
+
+
+/* Ver 109: reordered structure while preserving hero and speaker images */
+.hero {
+  min-height: 330px;
+}
+.hero-content {
+  padding-bottom: 48px;
+}
+.section-intro-first {
+  width: min(1180px, 90%);
+  padding-top: 72px;
+  padding-bottom: 34px;
+  align-items: start;
+}
+.section-intro-first .section-copy {
+  padding-top: 8px;
+}
+.section-intro-first .about-title {
+  font-size: clamp(30px, 3.7vw, 49px);
+  line-height: 1.34;
+}
+.section-intro-first .concept-card {
+  align-self: stretch;
+}
+.lecture-description-section {
+  width: min(1080px, 90%);
+  padding-top: 18px;
+  padding-bottom: 64px;
+}
+.lecture-description-card {
+  padding: clamp(28px, 4.5vw, 52px);
+  background: rgba(255,255,255,.96);
+  border-left: 7px solid var(--cyan);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+.lecture-description-card h2 {
+  margin-top: 8px;
+  font-size: clamp(26px, 3vw, 40px);
+}
+.lecture-description-card > p:not(.section-kicker) {
+  margin: 18px 0 0;
+  color: #34546c;
+  font-size: clamp(16px, 1.55vw, 18px);
+  line-height: 2;
+}
+.lecture-description-card .points {
+  margin: 24px 0 0;
+}
+.top-info-panel {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 900px) {
+  .section-intro-first {
+    padding-top: 58px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    min-height: 350px;
+  }
+  .hero-content {
+    padding-bottom: 44px;
+  }
+  .section-intro-first {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+  .section-intro-first .about-title {
+    font-size: clamp(24px, 7vw, 31px);
+    line-height: 1.45;
+  }
+  .lecture-description-section {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    padding-top: 8px;
+    padding-bottom: 48px;
+  }
+  .lecture-description-card {
+    padding: 24px 18px;
+    border-left-width: 5px;
+  }
+  .lecture-description-card > p:not(.section-kicker) {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .top-info-panel {
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+}
+
+
+
+/* Ver 110: hero -> about banner -> lecture guide + ICU */
+.about-banner-section {
+  width: min(1400px, 92%);
+  margin: 34px auto 26px;
+}
+.about-banner-card {
+  padding: clamp(28px, 4vw, 46px) clamp(26px, 5vw, 64px);
+  background: rgba(255, 255, 255, 0.98);
+  border-top: 7px solid var(--cyan);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+.about-banner-card .section-kicker {
+  margin: 0 0 12px;
+}
+.about-banner-card .about-title {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(29px, 3.5vw, 49px);
+  line-height: 1.42;
+  letter-spacing: 0;
+}
+.about-banner-card .about-title span {
+  display: block;
+}
+
+.lecture-guide-section {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+  padding: 12px 0 66px;
+}
+.lecture-guide-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.85fr);
+  gap: 28px;
+  align-items: stretch;
+}
+.lecture-guide-card {
+  padding: clamp(28px, 4vw, 48px);
+  background: rgba(255,255,255,.97);
+  border-top: 7px solid var(--cyan);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+.lecture-guide-card h2 {
+  margin: 7px 0 20px;
+  color: var(--navy);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.35;
+}
+.lecture-guide-card > p:not(.section-kicker) {
+  margin: 14px 0 0;
+  color: #34546c;
+  font-size: clamp(16px, 1.45vw, 18px);
+  line-height: 1.95;
+}
+.lecture-guide-card .points {
+  margin: 24px 0 0;
+}
+
+.icu-guide-column {
+  min-width: 0;
+}
+.icu-guide-column .concept-card {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  align-self: stretch;
+}
+.icu-guide-column .concept-card figcaption {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.top-info-panel {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .about-banner-section {
+    width: min(94%, 760px);
+  }
+  .lecture-guide-section {
+    width: min(94%, 760px);
+  }
+  .lecture-guide-grid {
+    grid-template-columns: 1fr;
+  }
+  .icu-guide-column .concept-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-banner-section {
+    width: calc(100% - 24px);
+    margin-top: 22px;
+    margin-bottom: 18px;
+  }
+  .about-banner-card {
+    padding: 24px 18px 26px;
+    border-top-width: 5px;
+    border-radius: 16px;
+  }
+  .about-banner-card .about-title {
+    font-size: clamp(23px, 6.8vw, 30px);
+    line-height: 1.5;
+  }
+  .lecture-guide-section {
+    width: calc(100% - 24px);
+    padding-top: 8px;
+    padding-bottom: 46px;
+  }
+  .lecture-guide-grid {
+    gap: 18px;
+  }
+  .lecture-guide-card {
+    padding: 24px 18px;
+    border-top-width: 5px;
+    border-radius: 16px;
+  }
+  .lecture-guide-card h2 {
+    font-size: clamp(25px, 7vw, 31px);
+  }
+  .lecture-guide-card > p:not(.section-kicker) {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+
+
+
+/* Ver 111: ABOUT headline in two desktop lines + narrative */
+.about-banner-card .about-title {
+  font-size: clamp(27px, 2.65vw, 43px);
+  line-height: 1.42;
+  letter-spacing: -0.025em;
+}
+.about-banner-card .about-title-line {
+  display: block;
+  white-space: nowrap;
+}
+.about-narrative {
+  margin-top: clamp(24px, 3vw, 38px);
+  padding-top: clamp(20px, 2.4vw, 30px);
+  border-top: 1px solid rgba(8, 118, 185, 0.20);
+}
+.about-narrative p {
+  margin: 0;
+  color: #34546c;
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 2;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.about-narrative p + p {
+  margin-top: 16px;
+}
+
+@media (max-width: 1100px) {
+  .about-banner-card .about-title {
+    font-size: clamp(24px, 2.75vw, 34px);
+  }
+}
+
+@media (max-width: 760px) {
+  .about-banner-card .about-title {
+    font-size: clamp(22px, 5.8vw, 29px);
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+  .about-banner-card .about-title-line {
+    white-space: normal;
+  }
+  .about-narrative {
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+  .about-narrative p {
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: left;
+  }
+}
+
+
+/* Ver 112: concise ABOUT copy */
+.about-narrative p + p {
+  margin-top: 13px;
+}
+.about-narrative .about-closing-message {
+  margin-top: clamp(22px, 2.5vw, 30px);
+  padding: 18px 22px;
+  color: var(--navy);
+  font-size: clamp(18px, 1.65vw, 22px);
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(232,248,253,.9), rgba(242,250,255,.95));
+  border: 1px solid rgba(0, 170, 210, .25);
+  border-radius: 14px;
+}
+@media (max-width: 760px) {
+  .about-narrative .about-closing-message {
+    padding: 16px 14px;
+    font-size: 17px;
+  }
+}
+
+
+
+/* Ver 113: core-message ABOUT box with three equal-level headings */
+.about-banner-section {
+  width: min(1240px, 92%);
+  margin-top: 34px;
+  margin-bottom: 30px;
+}
+
+.about-banner-card {
+  padding: clamp(34px, 5vw, 64px);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(72, 197, 224, .10), transparent 34%),
+    rgba(255, 255, 255, .98);
+  border: 1px solid rgba(15, 115, 164, .16);
+  border-top: 8px solid var(--cyan);
+  border-radius: 24px;
+  box-shadow: 0 18px 52px rgba(14, 78, 118, .14);
+}
+
+.about-core-message {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.about-message-section {
+  position: relative;
+  padding: 0 0 34px 30px;
+}
+
+.about-message-section + .about-message-section {
+  padding-top: 34px;
+  border-top: 1px solid rgba(8, 118, 185, .20);
+}
+
+.about-message-section::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--cyan);
+  border: 4px solid rgba(80, 201, 224, .20);
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+
+.about-message-section + .about-message-section::before {
+  top: 42px;
+}
+
+.about-message-heading {
+  margin: 0 0 20px;
+  color: var(--navy);
+  font-size: clamp(25px, 2.6vw, 38px);
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: .01em;
+}
+
+.about-message-section p {
+  margin: 0;
+  color: #294d66;
+  font-size: clamp(17px, 1.45vw, 20px);
+  font-weight: 500;
+  line-height: 2.05;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.about-message-section p + p {
+  margin-top: 14px;
+}
+
+.about-project-section {
+  background: linear-gradient(135deg, rgba(235, 249, 253, .76), rgba(246, 252, 255, .92));
+  margin-right: -18px;
+  margin-left: -18px;
+  padding-right: 30px;
+  padding-bottom: 36px;
+  padding-left: 48px;
+  border-radius: 18px;
+}
+
+.about-project-section::before {
+  left: 18px;
+}
+
+.about-question-section {
+  margin-top: 4px;
+  padding-bottom: 0;
+}
+
+.about-question-heading {
+  margin: 0;
+  padding: clamp(20px, 3vw, 28px) clamp(18px, 3vw, 34px);
+  color: #0a466b;
+  font-size: clamp(23px, 2.7vw, 36px);
+  text-align: center;
+  background: linear-gradient(135deg, rgba(222, 245, 251, .96), rgba(240, 250, 255, .98));
+  border: 1px solid rgba(0, 157, 196, .28);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.about-question-section::before {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .about-banner-section {
+    width: calc(100% - 24px);
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+
+  .about-banner-card {
+    padding: 28px 18px;
+    border-top-width: 6px;
+    border-radius: 18px;
+  }
+
+  .about-message-section {
+    padding-left: 24px;
+    padding-bottom: 28px;
+  }
+
+  .about-message-section + .about-message-section {
+    padding-top: 28px;
+  }
+
+  .about-message-section::before {
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-width: 3px;
+  }
+
+  .about-message-section + .about-message-section::before {
+    top: 35px;
+  }
+
+  .about-message-heading {
+    margin-bottom: 16px;
+    font-size: clamp(22px, 6.6vw, 29px);
+    line-height: 1.5;
+  }
+
+  .about-message-section p {
+    font-size: 16px;
+    line-height: 1.95;
+    text-align: left;
+  }
+
+  .about-project-section {
+    margin-right: -6px;
+    margin-left: -6px;
+    padding-right: 16px;
+    padding-left: 30px;
+    border-radius: 14px;
+  }
+
+  .about-project-section::before {
+    left: 8px;
+  }
+
+  .about-question-heading {
+    padding: 20px 14px;
+    font-size: clamp(21px, 6.4vw, 27px);
+  }
+}
+
+
+
+/* Ver 114: all three messages integrated into one compact BOX */
+.about-banner-section {
+  width: min(1240px, 92%);
+  margin: 30px auto 26px;
+}
+
+.about-banner-card {
+  padding: clamp(30px, 4.2vw, 52px) clamp(28px, 4.6vw, 58px);
+  background: rgba(255, 255, 255, .98);
+  border: 1px solid rgba(15, 115, 164, .15);
+  border-top: 7px solid var(--cyan);
+  border-radius: 22px;
+  box-shadow: 0 16px 44px rgba(14, 78, 118, .13);
+}
+
+.about-core-message {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-message-item {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.about-message-item + .about-message-item {
+  margin-top: 26px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.about-message-item::before,
+.about-message-item + .about-message-item::before {
+  display: none;
+}
+
+.about-message-heading {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: clamp(23px, 2.25vw, 34px);
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: .005em;
+}
+
+.about-message-heading::before {
+  content: "◎";
+  margin-right: .35em;
+  color: var(--cyan);
+}
+
+.about-message-item p {
+  margin: 0;
+  color: #294d66;
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 500;
+  line-height: 1.9;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.about-message-item p + p {
+  margin-top: 10px;
+}
+
+.about-final-heading {
+  margin: 0;
+  padding: 0;
+  color: #0a466b;
+  font-size: clamp(23px, 2.3vw, 35px);
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 760px) {
+  .about-banner-section {
+    width: calc(100% - 24px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .about-banner-card {
+    padding: 26px 18px;
+    border-top-width: 6px;
+    border-radius: 17px;
+  }
+
+  .about-message-item + .about-message-item {
+    margin-top: 22px;
+  }
+
+  .about-message-heading,
+  .about-final-heading {
+    margin-bottom: 10px;
+    font-size: clamp(21px, 6vw, 27px);
+    line-height: 1.48;
+  }
+
+  .about-message-item p {
+    font-size: 15.5px;
+    line-height: 1.85;
+    text-align: left;
+  }
+}
+
+
+
+/* Ver 115: ABOUT本文を太字にし、行間を少し詰める */
+.about-message-item p {
+  font-weight: 700;
+  line-height: 1.72;
+}
+
+.about-message-item p + p {
+  margin-top: 8px;
+}
+
+@media (max-width: 760px) {
+  .about-message-item p {
+    line-height: 1.72;
+  }
+}
+
+
+
+/* Ver 116: LECTURE GUIDEの7項目をABOUT小見出しと同じ書体・サイズ・◎で表示 */
+.lecture-guide-topic-list {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lecture-guide-topic-list li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 1.55em;
+  color: var(--navy);
+  font-size: clamp(23px, 2.25vw, 34px);
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: .005em;
+}
+
+.lecture-guide-topic-list li + li {
+  margin-top: 15px;
+}
+
+.lecture-guide-topic-list li::before {
+  content: "◎";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--cyan);
+}
+
+@media (max-width: 760px) {
+  .lecture-guide-topic-list {
+    margin-top: 20px;
+  }
+
+  .lecture-guide-topic-list li {
+    padding-left: 1.45em;
+    font-size: clamp(21px, 6vw, 27px);
+    line-height: 1.48;
+  }
+
+  .lecture-guide-topic-list li + li {
+    margin-top: 13px;
+  }
+}
+
+
+
+/* Ver 118: ABOUT見出し復帰 + 左2BOX縦置き + 右チラシ */
+.about-section-kicker {
+  margin: 0 0 22px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  line-height: 1.1;
+}
+
+.lecture-flyer-section {
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  padding: 12px 0 66px;
+}
+
+.lecture-flyer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.lecture-info-column {
+  display: grid;
+  gap: 22px;
+  min-width: 0;
+}
+
+.lecture-half-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.lecture-guide-card {
+  padding: clamp(26px, 3vw, 38px);
+}
+
+.lecture-guide-card h2 {
+  margin-bottom: 16px;
+}
+
+.lecture-guide-card .points {
+  margin: 0;
+}
+
+.lecture-guide-card .points li {
+  margin: 8px 0;
+  line-height: 1.42;
+}
+
+.lecture-info-column .concept-card {
+  max-width: none;
+  margin: 0;
+}
+
+.lecture-info-column .concept-card figcaption {
+  gap: 12px;
+  padding: clamp(26px, 3vw, 38px);
+}
+
+.lecture-info-column .concept-card strong {
+  line-height: 1.35;
+}
+
+.lecture-info-column .concept-card p {
+  font-weight: 600;
+  line-height: 1.62;
+}
+
+.flyer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.flyer-preview-card {
+  overflow: hidden;
+  padding: 14px;
+  background: rgba(255,255,255,.98);
+  border: 1px solid rgba(15,115,164,.18);
+  border-top: 7px solid var(--cyan);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.flyer-preview-link {
+  display: block;
+}
+
+.flyer-preview-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.flyer-download-button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--blue), #078bc2);
+  border-radius: 999px;
+  box-shadow: 0 10px 26px rgba(0, 102, 153, .20);
+}
+
+.flyer-download-button:hover,
+.flyer-download-button:focus-visible {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+@media (max-width: 900px) {
+  .lecture-flyer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .flyer-column {
+    width: min(100%, 620px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-section-kicker {
+    margin-bottom: 18px;
+    font-size: 12px;
+  }
+
+  .lecture-flyer-section {
+    width: calc(100% - 24px);
+    padding: 8px 0 46px;
+  }
+
+  .lecture-flyer-layout,
+  .lecture-info-column {
+    gap: 18px;
+  }
+
+  .lecture-guide-card,
+  .lecture-info-column .concept-card figcaption {
+    padding: 24px 18px;
+  }
+
+  .lecture-guide-card .points li {
+    margin: 7px 0;
+    line-height: 1.4;
+  }
+
+  .lecture-info-column .concept-card p {
+    line-height: 1.58;
+  }
+
+  .flyer-preview-card {
+    padding: 10px;
+    border-top-width: 6px;
+    border-radius: 17px;
+  }
+
+  .flyer-download-button {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+}
+
+
+
+/* Ver 119: flyer left / information right, matching event-card 4:6 ratio */
+.lecture-flyer-section {
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  padding: 16px 16px 66px;
+  box-sizing: border-box;
+}
+
+.lecture-flyer-layout {
+  display: grid;
+  grid-template-columns: minmax(340px, .88fr) minmax(510px, 1.35fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.flyer-column {
+  grid-column: 1;
+}
+
+.lecture-info-column {
+  grid-column: 2;
+}
+
+.lecture-info-column .concept-card strong {
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(18px, 1.65vw, 23px);
+  line-height: 1.3;
+  letter-spacing: 0;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+@media (max-width: 980px) {
+  .lecture-flyer-layout {
+    grid-template-columns: minmax(280px, .88fr) minmax(410px, 1.35fr);
+  }
+
+  .lecture-info-column .concept-card strong {
+    font-size: clamp(16px, 1.65vw, 20px);
+  }
+}
+
+@media (max-width: 820px) {
+  .lecture-flyer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .flyer-column,
+  .lecture-info-column {
+    grid-column: 1;
+    width: 100%;
+  }
+
+  .flyer-column {
+    order: 1;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .lecture-info-column {
+    order: 2;
+  }
+
+  .lecture-info-column .concept-card strong {
+    white-space: normal;
+    font-size: clamp(19px, 4.8vw, 23px);
+  }
+}
+
+@media (max-width: 620px) {
+  .lecture-flyer-section {
+    width: calc(100% - 24px);
+    padding: 8px 0 46px;
+  }
+}
+
+
+
+/* Ver 120: 上段Speaker BOXと下段Speaker Profileの内容を総入れ替え */
+.speaker-profile-upper {
+  display: block;
+  padding: clamp(18px, 2.2vw, 28px);
+}
+
+.speaker-profile-upper .speaker-profile-heading {
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.speaker-profile-upper .speaker-profile-heading img {
+  width: 112px;
+  height: 145px;
+}
+
+.speaker-profile-upper .speaker-profile-heading h2 {
+  font-size: clamp(22px, 2vw, 29px);
+}
+
+.speaker-profile-upper .speaker-profile-name {
+  font-size: clamp(21px, 2vw, 27px);
+}
+
+.speaker-profile-upper .speaker-profile-role {
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.speaker-profile-upper .speaker-profile-copy {
+  margin-top: 18px;
+}
+
+.speaker-profile-upper .speaker-profile-copy p {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.speaker-profile-upper .profile-button-more {
+  padding: 9px 16px;
+  font-size: 13px;
+}
+
+.speaker-summary-lower {
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.speaker-summary-lower .speaker-summary-copy {
+  max-width: 900px;
+}
+
+.speaker-summary-lower .speaker-name {
+  font-size: clamp(23px, 2.5vw, 32px);
+}
+
+.speaker-summary-lower .speaker-role {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.speaker-summary-lower .speaker-bio {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+@media (max-width: 760px) {
+  .speaker-profile-upper .speaker-profile-heading {
+    grid-template-columns: 95px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .speaker-profile-upper .speaker-profile-heading img {
+    width: 95px;
+    height: 126px;
+  }
+
+  .speaker-profile-upper .speaker-profile-copy p {
+    font-size: 13px;
+    line-height: 1.68;
+  }
+}
+
+
+
+/* Ver 121: Lecture/ICU title and Speaker profile adjustments */
+.lecture-guide-card .lecture-guide-main-title {
+  font-size: clamp(23px, 2.25vw, 34px);
+}
+
+.lecture-info-column .concept-card #icu-title {
+  white-space: nowrap;
+}
+
+.lecture-info-column .concept-card .icu-title-main {
+  font-size: 1.12em;
+}
+
+.lecture-info-column .concept-card .icu-title-question {
+  font-size: 1em;
+}
+
+.speaker-profile-name-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-top: 8px;
+}
+
+.speaker-profile-upper .speaker-profile-name-row .speaker-profile-name {
+  margin: 0;
+}
+
+.speaker-profile-upper .speaker-profile-qualification {
+  margin: 0;
+  color: #335a73;
+  font-size: clamp(15px, 1.25vw, 18px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.speaker-profile-upper .speaker-profile-affiliations {
+  display: block;
+  margin: 10px 0 0;
+  color: #244d68;
+  font-size: clamp(14px, 1.3vw, 18px);
+  font-weight: 700;
+  line-height: 1.58;
+}
+
+.speaker-profile-upper .speaker-profile-affiliations span {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .lecture-info-column .concept-card #icu-title {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 760px) {
+  .lecture-guide-card .lecture-guide-main-title {
+    font-size: clamp(21px, 6vw, 27px);
+  }
+
+  .speaker-profile-name-row {
+    gap: 4px 10px;
+  }
+
+  .speaker-profile-upper .speaker-profile-qualification {
+    font-size: 15px;
+  }
+
+  .speaker-profile-upper .speaker-profile-affiliations {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+
+
+/* Ver 122: 開催概要のアクセス表示と講演時間を調整 */
+.event-detail-row {
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 12px;
+}
+
+.event-label {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.event-datetime .event-session {
+  padding-left: 0;
+  line-height: 1.55;
+}
+
+@media (max-width: 620px) {
+  .event-detail-row {
+    column-gap: 9px;
+  }
+
+  .event-datetime .event-session {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+
+
+/* Ver 123: 開催概要の部名・会場名を強調し、住所を追加 */
+.event-session .session-name {
+  font-weight: 800;
+}
+
+.event-value .venue-name {
+  color: inherit;
+  font-weight: 800;
+}
+
+.event-address-row .event-value {
+  line-height: 1.55;
+}
+
+@media (max-width: 620px) {
+  .event-address-row .event-value {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+
+
+/* Ver 124: 開催概要／講師を5:5、開催概要内の配置を整理 */
+.top-info-panel {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.event-access-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.event-access-value p {
+  margin: 0;
+}
+
+.event-access-value .map-link-button {
+  margin: 0;
+}
+
+.entry-row {
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .top-info-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .top-info-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Ver 125: 開催概要と講師プロフィールの追加修正 */
+.event-access-inline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.event-access-inline p {
+  margin: 0;
+}
+
+.event-access-inline .map-link-button {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.event-capacity-value span {
+  display: block;
+}
+
+.event-capacity-value span + span {
+  margin-top: 4px;
+}
+
+.speaker-profile-upper .speaker-profile-affiliations span {
+  display: block;
+}
+
+.speaker-profile-upper .speaker-profile-copy p {
+  margin: 0 0 14px;
+}
+
+@media (max-width: 620px) {
+  .event-access-inline {
+    align-items: flex-start;
+  }
+
+  .event-capacity-value span + span {
+    margin-top: 6px;
+  }
+}
+
+
+
+/* Ver 126: 講師見出しの高さを開催概要とそろえ、本文を詰める */
+.speaker-profile-upper {
+  display: block;
+  padding: 4px 4px 2px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.speaker-card-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.speaker-card-heading .section-kicker {
+  margin: 0;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  line-height: 1.1;
+}
+
+.speaker-card-heading h2 {
+  margin: 2px 0 0;
+  color: var(--navy);
+  font-size: clamp(22px, 2.4vw, 31px);
+  line-height: 1.1;
+}
+
+.speaker-profile-body {
+  padding: clamp(18px, 2.2vw, 28px);
+  background: linear-gradient(145deg, #eaf8ff, #fff);
+  border: 1px solid #d5eaf5;
+  border-radius: 13px;
+}
+
+.speaker-profile-body .speaker-profile-heading {
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.speaker-profile-body .speaker-profile-heading img {
+  width: 112px;
+  height: 145px;
+}
+
+.speaker-profile-upper .speaker-profile-affiliations {
+  margin-top: 8px;
+  font-size: clamp(14px, 1.22vw, 17px);
+  line-height: 1.48;
+}
+
+.speaker-profile-upper .speaker-profile-affiliations span {
+  display: block;
+}
+
+.speaker-profile-upper .speaker-profile-copy {
+  margin-top: 16px;
+}
+
+.speaker-profile-upper .speaker-profile-copy .speaker-profile-continuous {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.62;
+}
+
+.speaker-profile-upper .profile-button-more {
+  margin-top: 16px;
+}
+
+@media (max-width: 760px) {
+  .speaker-profile-body {
+    padding: 18px;
+  }
+
+  .speaker-profile-body .speaker-profile-heading {
+    grid-template-columns: 95px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .speaker-profile-body .speaker-profile-heading img {
+    width: 95px;
+    height: 126px;
+  }
+
+  .speaker-profile-upper .speaker-profile-affiliations {
+    font-size: 13px;
+    line-height: 1.48;
+  }
+
+  .speaker-profile-upper .speaker-profile-copy .speaker-profile-continuous {
+    font-size: 13px;
+    line-height: 1.58;
+  }
+}
+
+
+
+/* Ver 127: 開催概要の文字拡大・アクセス地図追加・プロフィール修正 */
+.event-emphasis-row > .event-label {
+  font-size: 18px;
+}
+
+.event-datetime .event-date {
+  font-size: clamp(18px, 1.6vw, 21px);
+  line-height: 1.5;
+}
+
+.event-datetime .event-session {
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.5;
+}
+
+.venue-emphasis-row .venue-name {
+  font-size: clamp(17px, 1.45vw, 20px);
+  line-height: 1.45;
+}
+
+.event-access-map-layout {
+  display: block;
+}
+
+.event-access-map-layout .access-description {
+  margin: 0 0 10px;
+}
+
+.access-map-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.access-map-image {
+  display: block;
+  width: min(230px, 68%);
+  height: auto;
+  border: 1px solid rgba(16, 71, 113, .20);
+  border-radius: 8px;
+}
+
+.access-map-button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.speaker-profile-upper .speaker-profile-copy .speaker-profile-continuous {
+  line-height: 1.58;
+}
+
+@media (max-width: 760px) {
+  .event-emphasis-row > .event-label {
+    font-size: 17px;
+  }
+
+  .event-datetime .event-date {
+    font-size: 18px;
+  }
+
+  .event-datetime .event-session {
+    font-size: 15px;
+  }
+
+  .venue-emphasis-row .venue-name {
+    font-size: 17px;
+  }
+
+  .access-map-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .access-map-image {
+    width: min(260px, 100%);
+  }
+}
+
+
+
+/* Ver 128: 講師プロフィールへ専門領域を追加 */
+.speaker-profile-upper .speaker-expertise {
+  margin: 14px 0 0;
+  color: #244d68;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.speaker-profile-upper .speaker-expertise strong {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.speaker-profile-upper .speaker-expertise + .profile-button-more {
+  margin-top: 14px;
+}
+
+@media (max-width: 760px) {
+  .speaker-profile-upper .speaker-expertise {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+
+
+/* Ver 129: ABOUT第2項修正 + ICU説明BOXを講演対象者BOXへ変更 */
+.about-core-message .about-message-item p {
+  text-align: left;
+}
+
+.audience-card {
+  display: block;
+}
+
+.audience-card-content {
+  padding: clamp(26px, 3vw, 38px);
+}
+
+.audience-card-title {
+  margin: 0;
+  color: #075784;
+  font-size: clamp(22px, 2vw, 29px);
+  font-weight: 800;
+  line-height: 1.42;
+}
+
+.audience-list {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.audience-list li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.4em;
+  color: #34546c;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.62;
+}
+
+.audience-list li + li {
+  margin-top: 10px;
+}
+
+.audience-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--cyan);
+  font-size: .78em;
+}
+
+@media (max-width: 760px) {
+  .audience-card-content {
+    padding: 24px 18px;
+  }
+
+  .audience-card-title {
+    font-size: clamp(21px, 5.8vw, 27px);
+  }
+
+  .audience-list li {
+    font-size: 15px;
+    line-height: 1.58;
+  }
+}
+
+
+/* Ver 130: 講演対象者の項目と初心者向け注記を更新 */
+.audience-note {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  color: #0a5278;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.55;
+  border-top: 1px solid rgba(0, 157, 196, .18);
+}
+@media (max-width: 760px) {
+  .audience-note {
+    margin-top: 16px;
+    padding-top: 12px;
+    font-size: 14px;
+  }
+}
+
+
+
+/* Ver 131: 対象者最終案・LECTURE GUIDEより前へ配置 */
+.audience-list li {
+  line-height: 1.58;
+}
+
+.audience-note {
+  line-height: 1.5;
+}
+
+
+
+/* Ver 134: 英語見出し統一・ヘッダー拡大・固定表示 */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+.site-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  min-height: 74px;
+  overflow: visible;
+}
+
+.brand {
+  font-size: 15.5px;
+}
+
+.brand small {
+  font-size: 13px;
+}
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  font-size: 14px;
+}
+
+.site-nav {
+  gap: 15px;
+}
+
+.site-nav a {
+  font-size: 14.5px;
+}
+
+#about,
+#audience,
+#flyers,
+#event,
+#speaker,
+#entry {
+  scroll-margin-top: 94px;
+}
+
+.audience-kicker {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  line-height: 1.1;
+}
+
+.flyer-section-heading {
+  margin: 0 0 12px;
+  padding: 0 4px;
+}
+
+.flyer-section-heading .section-kicker {
+  margin: 0 0 5px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  line-height: 1.1;
+}
+
+.flyer-section-heading h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.2;
+}
+
+@media (max-width: 980px) {
+  .site-nav {
+    gap: 9px;
+  }
+
+  .site-nav a {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 620px) {
+  html {
+    scroll-padding-top: 118px;
+  }
+
+  .site-header {
+    min-height: 102px;
+    overflow: visible;
+  }
+
+  .brand {
+    font-size: 13px;
+  }
+
+  .brand small {
+    font-size: 11.5px;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+    gap: 5px;
+    overflow-x: auto;
+    padding-bottom: 3px;
+  }
+
+  .site-nav a {
+    font-size: 11.5px;
+  }
+
+  #about,
+  #audience,
+  #flyers,
+  #event,
+  #speaker,
+  #entry {
+    scroll-margin-top: 122px;
+  }
+
+  .audience-kicker,
+  .flyer-section-heading .section-kicker {
+    font-size: 12px;
+  }
+}
+
+
+
+/* Ver 135: 対象者/講演案内、開催概要/講師、2種チラシ、リンク集 */
+.audience-guide-section {
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  padding: 16px 16px 58px;
+  box-sizing: border-box;
+}
+
+.audience-guide-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.audience-guide-grid > article {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.audience-guide-grid .lecture-guide-card {
+  margin: 0;
+}
+
+.event-flyers-section {
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  padding: 18px 16px 64px;
+  box-sizing: border-box;
+}
+
+.section-heading-centered {
+  max-width: 880px;
+  margin: 0 auto 26px;
+  text-align: center;
+}
+
+.section-heading-centered .section-kicker {
+  margin: 0 0 7px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.section-heading-centered h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.section-heading-centered > p:last-child {
+  margin: 13px 0 0;
+  color: #45657a;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.two-flyer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.two-flyer-card {
+  padding: 20px;
+  background: rgba(255, 255, 255, .98);
+  border: 1px solid rgba(15, 115, 164, .17);
+  border-top: 7px solid var(--cyan);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.flyer-edition-label {
+  margin: 0;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  line-height: 1.2;
+}
+
+.two-flyer-card h3 {
+  margin: 6px 0 15px;
+  color: var(--navy);
+  font-size: clamp(22px, 2.25vw, 30px);
+  line-height: 1.3;
+}
+
+.two-flyer-preview-link {
+  display: block;
+  overflow: hidden;
+  background: #f7fbfd;
+  border: 1px solid rgba(20, 80, 120, .15);
+  border-radius: 13px;
+}
+
+.two-flyer-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.two-flyer-card .flyer-download-button {
+  margin-top: 16px;
+}
+
+.related-links-section {
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  padding: 0 16px 70px;
+  box-sizing: border-box;
+}
+
+.related-links-box {
+  padding: clamp(28px, 4vw, 46px);
+  background: linear-gradient(135deg, rgba(238, 249, 253, .96), rgba(255, 255, 255, .98));
+  border: 1px solid rgba(15, 115, 164, .17);
+  border-top: 7px solid var(--cyan);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.related-links-box .section-kicker {
+  margin: 0 0 7px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.related-links-box h2 {
+  margin: 0 0 22px;
+  color: var(--navy);
+  font-size: clamp(27px, 3vw, 38px);
+}
+
+.related-links-list {
+  display: grid;
+  gap: 12px;
+}
+
+.related-link-card {
+  position: relative;
+  display: grid;
+  gap: 5px;
+  padding: 17px 48px 17px 19px;
+  color: inherit;
+  text-decoration: none;
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid rgba(21, 105, 150, .15);
+  border-radius: 13px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.related-link-card:hover,
+.related-link-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 85, 125, .12);
+}
+
+.related-link-card strong {
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.related-link-card > span:not(.related-link-arrow) {
+  color: #527084;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.related-link-arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: var(--blue);
+  font-size: 24px;
+  font-weight: 800;
+  transform: translateY(-50%);
+}
+
+#lecture-description,
+#flyers,
+#links {
+  scroll-margin-top: 94px;
+}
+
+@media (max-width: 820px) {
+  .audience-guide-grid,
+  .two-flyer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .audience-guide-section,
+  .event-flyers-section,
+  .related-links-section {
+    width: calc(100% - 24px);
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .audience-guide-grid,
+  .two-flyer-grid {
+    gap: 18px;
+  }
+
+  .two-flyer-card {
+    padding: 15px;
+    border-top-width: 6px;
+    border-radius: 17px;
+  }
+
+  .section-heading-centered {
+    margin-bottom: 20px;
+  }
+
+  .related-links-box {
+    padding: 25px 18px;
+    border-top-width: 6px;
+    border-radius: 17px;
+  }
+
+  .related-link-card {
+    padding: 15px 42px 15px 15px;
+  }
+
+  #lecture-description,
+  #flyers,
+  #links {
+    scroll-margin-top: 122px;
+  }
+}
+
+
+
+/* Ver 136: 2種チラシの高さ統一・リンク集を3行へ簡潔化 */
+.two-flyer-grid {
+  align-items: stretch;
+}
+
+.two-flyer-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.two-flyer-preview-link {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1055 / 1491;
+  padding: 0;
+  background: #f7fbfd;
+  box-sizing: border-box;
+}
+
+.two-flyer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.two-flyer-card .flyer-download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  margin-top: 16px;
+  padding: 12px 20px;
+  line-height: 1.35;
+  box-sizing: border-box;
+}
+
+.related-links-compact {
+  display: grid;
+  gap: 0;
+}
+
+.related-link-line {
+  display: block;
+  padding: 14px 2px;
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(21, 105, 150, .16);
+}
+
+.related-link-line:first-child {
+  border-top: 1px solid rgba(21, 105, 150, .16);
+}
+
+.related-link-line::after {
+  content: " ↗";
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.related-link-line:hover,
+.related-link-line:focus-visible {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 620px) {
+  .two-flyer-card .flyer-download-button {
+    min-height: 52px;
+    padding: 11px 15px;
+  }
+
+  .related-link-line {
+    padding: 13px 0;
+    font-size: 15.5px;
+  }
+}
+
+
+
+/* Ver 137: 中村研究室リンク更新・外部リンク動作案内 */
+.external-link-note {
+  margin: 14px 0 0;
+  color: #5b7282;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-width: 620px) {
+  .external-link-note {
+    font-size: 12.5px;
+  }
+}
+
+
+
+/* Ver 138: 第31稿 UIレビュー反映版 */
+:root {
+  --heading-english: #6e8ea2;
+  --heading-japanese: #103b5d;
+  --heading-accent: #00a9d9;
+  --cta-coral: #ed6037;
+  --cta-coral-dark: #c94324;
+}
+
+/* 全セクションの英語見出し・日本語タイトルを統一 */
+.section-heading-block {
+  position: relative;
+  margin: 0 0 24px;
+  padding: 2px 0 2px 18px;
+  text-align: left;
+}
+
+.section-heading-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  min-height: 50px;
+  background: linear-gradient(180deg, var(--heading-accent), #78dce9);
+  border-radius: 999px;
+}
+
+.section-heading-block .section-kicker,
+.event-heading .section-heading-block .section-kicker,
+.event-heading .section-heading-block p {
+  margin: 0 0 6px;
+  color: var(--heading-english);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.section-heading-block h2,
+.event-heading .section-heading-block h2,
+.speaker-card-heading .section-heading-block h2,
+.section-heading-centered .section-heading-block h2,
+.related-links-box .section-heading-block h2 {
+  margin: 0;
+  color: var(--heading-japanese);
+  font-size: clamp(28px, 2.65vw, 34px);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: .01em;
+}
+
+.about-main-heading {
+  margin-bottom: 30px;
+}
+
+.audience-card-content,
+.lecture-guide-card,
+.event-card,
+.speaker-profile-upper,
+.section-heading-centered,
+.related-links-box {
+  text-align: left;
+}
+
+.section-heading-centered {
+  max-width: none;
+  margin: 0 0 26px;
+}
+
+.section-heading-centered > p:last-child {
+  margin: 13px 0 0 18px;
+  max-width: 780px;
+  text-align: left;
+}
+
+/* ABOUTを短く読ませる */
+.about-message-item p {
+  font-weight: 600;
+  line-height: 1.72;
+}
+
+.about-message-item p strong {
+  color: #075f93;
+  font-weight: 900;
+}
+
+/* 予約CTA：下線を消し、最重要ボタンとして強調 */
+.primary-button,
+.booking-cta,
+.nav-cta,
+.flyer-download-button,
+.profile-button,
+.secondary-button,
+.map-link-button {
+  text-decoration: none !important;
+}
+
+.booking-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 13px 30px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7a45, var(--cta-coral) 48%, var(--cta-coral-dark));
+  border: 2px solid rgba(255,255,255,.75);
+  box-shadow: 0 14px 30px rgba(201, 67, 36, .32);
+  font-size: 17px;
+  letter-spacing: .02em;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.booking-cta:hover,
+.booking-cta:focus-visible {
+  color: #fff;
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 17px 35px rgba(201, 67, 36, .38);
+  outline: 3px solid rgba(255, 187, 140, .55);
+  outline-offset: 3px;
+}
+
+.site-nav .nav-cta {
+  color: #3b2700;
+  background: linear-gradient(135deg, #ffe08b, #ffc94e);
+  box-shadow: 0 5px 14px rgba(255, 201, 78, .23);
+}
+
+/* 主催者表記 */
+.event-organizer-row {
+  margin-top: 4px;
+  padding-top: 7px;
+}
+
+.event-organizer-value span {
+  display: block;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.event-organizer-value span:first-child {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+/* タブレット：2カラムのままでも読みやすい文字サイズ */
+@media (min-width: 821px) and (max-width: 1024px) {
+  .section-heading-block h2,
+  .event-heading .section-heading-block h2,
+  .speaker-card-heading .section-heading-block h2,
+  .section-heading-centered .section-heading-block h2,
+  .related-links-box .section-heading-block h2 {
+    font-size: clamp(24px, 2.8vw, 29px);
+  }
+
+  .audience-guide-grid,
+  .top-info-panel,
+  .two-flyer-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 820px) {
+  .section-heading-block {
+    margin-bottom: 20px;
+  }
+
+  .section-heading-block h2,
+  .event-heading .section-heading-block h2,
+  .speaker-card-heading .section-heading-block h2,
+  .section-heading-centered .section-heading-block h2,
+  .related-links-box .section-heading-block h2 {
+    font-size: clamp(25px, 5.2vw, 31px);
+  }
+
+  .top-info-panel {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 620px) {
+  .section-heading-block {
+    padding-left: 14px;
+    margin-bottom: 18px;
+  }
+
+  .section-heading-block::before {
+    width: 3px;
+    min-height: 44px;
+  }
+
+  .section-heading-block .section-kicker,
+  .event-heading .section-heading-block .section-kicker,
+  .event-heading .section-heading-block p {
+    margin-bottom: 5px;
+    font-size: 11.5px;
+    letter-spacing: .14em;
+  }
+
+  .section-heading-block h2,
+  .event-heading .section-heading-block h2,
+  .speaker-card-heading .section-heading-block h2,
+  .section-heading-centered .section-heading-block h2,
+  .related-links-box .section-heading-block h2 {
+    font-size: clamp(23px, 6.5vw, 28px);
+    line-height: 1.32;
+  }
+
+  .section-heading-centered > p:last-child {
+    margin-left: 14px;
+    font-size: 15px;
+  }
+
+  .about-message-item p {
+    font-size: 15px;
+    line-height: 1.68;
+  }
+
+  .booking-cta {
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+
+  .event-organizer-value span {
+    font-size: 14px;
+  }
+}
+
+/* Ver 138b: mobile/tablet safety overrides after responsive precheck */
+@media (max-width: 820px) {
+  .top-info-panel,
+  .audience-guide-grid,
+  .two-flyer-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .event-card,
+  .speaker-profile-upper,
+  .audience-card,
+  .lecture-guide-card,
+  .two-flyer-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 620px) {
+  #entry,
+  .entry-row {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #entry .booking-cta,
+  .entry-row .primary-button {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+  }
+}
+
+/* Ver 138c: iPhoneのアクセス地図・Googleマップボタン */
+@media (max-width: 620px) {
+  .access-map-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 9px !important;
+    width: 100% !important;
+  }
+
+  .access-map-image {
+    width: 100% !important;
+    max-width: 280px !important;
+    justify-self: start;
+  }
+
+  .access-map-button {
+    width: 100% !important;
+    max-width: 280px !important;
+    min-height: 42px;
+    box-sizing: border-box;
+  }
+}
+
+
+/* Ver 139: ヘッダーを常時表示（iPhone Safariを含む） */
+:root {
+  --site-header-height: 74px;
+}
+
+html {
+  scroll-padding-top: calc(var(--site-header-height) + 12px) !important;
+}
+
+body {
+  padding-top: var(--site-header-height);
+}
+
+.site-header {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+  min-height: 74px;
+  height: auto;
+  overflow: visible !important;
+  box-sizing: border-box;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+#top,
+#about,
+#audience,
+#lecture-description,
+#event,
+#speaker,
+#flyers,
+#links,
+#entry,
+#speaker-profile,
+#event-title {
+  scroll-margin-top: calc(var(--site-header-height) + 12px) !important;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --site-header-height: 104px;
+  }
+
+  .site-header {
+    min-height: 104px;
+  }
+
+  .site-nav {
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2px;
+    overflow: visible;
+    padding: 4px 0 1px;
+    white-space: nowrap;
+  }
+
+  .site-nav a {
+    min-width: 0;
+    padding: 4px 3px;
+    font-size: clamp(9.6px, 2.75vw, 11px);
+    line-height: 1.2;
+  }
+
+  .site-nav .nav-cta {
+    padding: 5px 7px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-nav {
+    gap: 1px;
+  }
+
+  .site-nav a {
+    padding-right: 2px;
+    padding-left: 2px;
+    font-size: 9.2px;
+  }
+
+  .site-nav .nav-cta {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+
+/* Ver 140: 固定ヘッダーでページ内リンク先の見出しが隠れないよう補正 */
+:root {
+  --anchor-clearance: 20px;
+}
+
+html {
+  scroll-padding-top: calc(var(--site-header-height) + var(--anchor-clearance)) !important;
+}
+
+#top,
+#about,
+#audience,
+#lecture-description,
+#event,
+#speaker,
+#flyers,
+#links,
+#entry,
+#speaker-profile,
+#event-title {
+  scroll-margin-top: calc(var(--site-header-height) + var(--anchor-clearance)) !important;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --anchor-clearance: 16px;
+  }
+}
+
+
+/* Ver 141: 固定ヘッダーに「チラシ」ボタンを追加 */
+@media (max-width: 620px) {
+  .site-nav {
+    grid-template-columns: repeat(7, max-content);
+  }
+
+  .site-nav a {
+    padding-right: 2.5px;
+    padding-left: 2.5px;
+    font-size: clamp(9.2px, 2.55vw, 10.8px);
+    letter-spacing: -0.025em;
+  }
+
+  .site-nav .nav-cta {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-nav a {
+    padding-right: 1.5px;
+    padding-left: 1.5px;
+    font-size: 8.8px;
+  }
+
+  .site-nav .nav-cta {
+    padding-right: 4px;
+    padding-left: 4px;
   }
 }
