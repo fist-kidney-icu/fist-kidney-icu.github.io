@@ -2859,3 +2859,22 @@ html {
     padding-left: 4px;
   }
 }
+
+
+/* Ver 143: 参加費の公募寄付金扱いを明記 */
+.event-fee .fee-note {
+  display: block;
+  margin-top: 5px;
+  color: #34546c;
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+@media (max-width: 620px) {
+  .event-fee .fee-note {
+    margin-top: 6px;
+    font-size: 0.92em;
+    line-height: 1.6;
+  }
+}
