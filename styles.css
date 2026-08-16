@@ -3490,3 +3490,63 @@ html {
     white-space: nowrap !important;
   }
 }
+/* Ver 155: image strip ends below catchphrase + speaker profile */
+
+@media (max-width: 620px) {
+
+  /* ヒーロー全体の背景画像は使わない */
+  .hero {
+    background: linear-gradient(
+      180deg,
+      #f7fcff 0%,
+      #eef8fd 100%
+    ) !important;
+  }
+
+  .hero > .hero-image,
+  .hero > .hero-shade {
+    display: none !important;
+  }
+
+  /* ICU画像はキャッチフレーズ直下の横長帯だけ */
+  .hero-strip-visual {
+    display: block !important;
+    width: 100% !important;
+    margin: 12px 0 14px !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+    background: #eef8fd !important;
+  }
+
+  .hero-strip-visual img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 1 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    opacity: 0.26 !important;
+    filter: saturate(.70) brightness(1.15) !important;
+  }
+
+  /* 講師情報 */
+  .hero-speaker-info {
+    width: 100% !important;
+    margin-top: 4px !important;
+    padding: 14px 0 4px !important;
+    border-top: 1px solid rgba(7,95,147,.20) !important;
+    color: #173753 !important;
+    font-size: min(3.65vw, 15px) !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-speaker-info p {
+    margin: 2px 0 !important;
+  }
+
+  .hero-speaker-name {
+    margin-bottom: 7px !important;
+    color: #062a4e !important;
+    font-size: min(4.1vw, 17px) !important;
+  }
+}
