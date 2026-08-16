@@ -3007,3 +3007,55 @@ html {
     font-size: 16px;
   }
 }
+/* Ver 146: mobile title + navigation refinement */
+
+@media (max-width: 620px) {
+
+  /* タイトルを2行できれいに固定 */
+  .hero h1 {
+    font-size: clamp(28px, 7.7vw, 32px);
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+  }
+
+  .hero h1 strong {
+    font-size: 1.28em;
+  }
+
+  /* ヘッダーを2段構成に戻す */
+  .site-header {
+    height: auto;
+    min-height: 112px;
+    padding: 9px 12px 7px;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+  }
+
+  .site-nav {
+    order: 3;
+    display: flex;
+    width: 100%;
+    gap: 11px;
+    overflow-x: auto;
+    padding: 3px 2px 2px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-nav a:not(.nav-cta) {
+    display: inline-block;
+    flex: 0 0 auto;
+    font-size: 11px;
+  }
+
+  .site-nav .nav-cta {
+    display: inline-block;
+    flex: 0 0 auto;
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
