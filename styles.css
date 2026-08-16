@@ -3906,3 +3906,28 @@ html {
   }
 
 }
+/* Ver 161: equal hero title size + tighter top spacing */
+
+@media (max-width: 620px) {
+
+  /* 2行のタイトルを同じフォントサイズに */
+  .hero-title-line1,
+  .hero-title-line2 {
+    font-size: min(7.4vw, 31px) !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .hero-title-line2 {
+    margin-top: 3px !important;
+  }
+
+  /* 「開催決定」とイメージ図の間を狭く */
+  .status {
+    margin-bottom: 4px !important;
+  }
+
+  .hero-visual-panel {
+    margin-top: 4px !important;
+  }
+}
