@@ -3152,3 +3152,20 @@ html {
     font-size: 10px !important;
   }
 }
+/* Ver 148: mobile title auto-fit */
+
+@media (max-width: 620px) {
+
+  .hero h1 {
+    font-size: min(6.6vw, 28px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.04em !important;
+    white-space: nowrap !important;
+  }
+
+  .hero h1 strong {
+    display: inline !important;
+    font-size: 1.18em !important;
+    white-space: nowrap !important;
+  }
+}
