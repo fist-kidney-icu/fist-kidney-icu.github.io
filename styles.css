@@ -3257,3 +3257,33 @@ html {
     display: none !important;
   }
 }
+/* Ver 149: horizontal ICU image strip */
+
+.hero-strip-visual {
+  margin: 16px 0 14px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eef8fd;
+}
+
+.hero-strip-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.28;
+  filter: saturate(0.75) brightness(1.12);
+}
+
+@media (max-width: 620px) {
+  .hero-strip-visual {
+    margin: 14px 0 12px;
+    border-radius: 10px;
+  }
+
+  .hero-strip-visual img {
+    aspect-ratio: 4 / 1;
+    opacity: 0.24;
+  }
+}
