@@ -3615,3 +3615,90 @@ html {
     line-height: 1.5 !important;
   }
 }
+/* Ver 157: mobile hero title/catch overlay on image */
+
+.hero-visual-panel {
+  position: relative;
+  width: 100%;
+  margin: 14px 0 16px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #eef8fd;
+}
+
+.hero-visual-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-visual-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero-visual-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 252, 255, 0.93) 0%,
+    rgba(248, 252, 255, 0.82) 38%,
+    rgba(248, 252, 255, 0.48) 72%,
+    rgba(248, 252, 255, 0.16) 100%
+  );
+}
+
+@media (max-width: 620px) {
+
+  .hero-visual-panel {
+    width: 100% !important;
+    margin: 14px 0 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .hero-visual-panel img {
+    width: 100% !important;
+    aspect-ratio: 1.65 / 1 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    opacity: 0.38 !important;
+    filter: saturate(0.78) brightness(1.08) !important;
+  }
+
+  .hero-visual-copy {
+    padding: 20px 16px 16px !important;
+  }
+
+  .hero-visual-copy h1 {
+    margin: 0 !important;
+    max-width: 76% !important;
+    font-size: min(10.2vw, 48px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.055em !important;
+    white-space: normal !important;
+    color: #08284b !important;
+  }
+
+  .hero-visual-copy h1 strong {
+    display: block !important;
+    margin-top: 2px !important;
+    font-size: 1.08em !important;
+    color: #0c78bf !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-visual-copy .hero-catch {
+    margin-top: 18px !important;
+    max-width: 72% !important;
+    padding-left: 10px !important;
+    border-left: 4px solid var(--cyan) !important;
+    font-size: min(4.35vw, 17px) !important;
+    line-height: 1.55 !important;
+    font-weight: 700 !important;
+    color: #0b5d90 !important;
+  }
+}
