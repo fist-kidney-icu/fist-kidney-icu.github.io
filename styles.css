@@ -3931,3 +3931,27 @@ html {
     margin-top: 4px !important;
   }
 }
+/* Ver 162: force equal title font size */
+
+@media (max-width: 620px) {
+
+  .hero-title-line1,
+  .hero-title-line2 {
+    display: block !important;
+    font-size: min(7.2vw, 30px) !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.045em !important;
+    font-weight: 800 !important;
+  }
+
+  .hero-title-line2 {
+    margin-top: 3px !important;
+  }
+
+  /* strong に残っている拡大指定を無効化 */
+  .hero-visual-copy h1 strong,
+  .hero-title-line2 {
+    font-size: min(7.2vw, 30px) !important;
+    transform: none !important;
+  }
+}
