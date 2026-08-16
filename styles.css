@@ -2963,3 +2963,47 @@ html {
     letter-spacing: -0.02em;
   }
 }
+
+/* Ver 145: hero event information and booking button */
+
+.hero-event-info {
+  margin-top: 18px;
+  color: var(--navy);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero-event-info p {
+  margin: 2px 0;
+}
+
+.hero-booking-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  color: var(--navy);
+  background: var(--sun);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(4,43,82,.18);
+}
+
+@media (max-width: 620px) {
+  .hero-event-info {
+    margin-top: 17px;
+    padding-top: 13px;
+    border-top: 1px solid rgba(7,95,147,.22);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .hero-booking-button {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 13px 14px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
