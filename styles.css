@@ -3311,3 +3311,48 @@ html {
     background: rgba(255,255,255,.96) !important;
   }
 }
+/* Ver 151: mobile hero full-width text layout */
+
+@media (max-width: 620px) {
+
+  .hero-content {
+    width: calc(100% - 24px) !important;
+    margin: 6px auto 0 !important;
+    padding: 14px 8px 18px !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .eyebrow {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero h1 {
+    font-size: min(6.7vw, 29px) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.045em !important;
+    white-space: nowrap !important;
+  }
+
+  .hero h1 strong {
+    font-size: 1.18em !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-catch {
+    width: 100% !important;
+    margin-top: 14px !important;
+    padding-left: 10px !important;
+    font-size: min(4.15vw, 17px) !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-strip-visual {
+    width: 100% !important;
+  }
+}
