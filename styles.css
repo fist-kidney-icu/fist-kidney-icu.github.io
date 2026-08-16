@@ -3169,3 +3169,91 @@ html {
     white-space: nowrap !important;
   }
 }
+/* Ver 149: mobile hero redesign */
+
+.hero-catch {
+  margin-top: 14px;
+  padding-left: 12px;
+  border-left: 4px solid var(--cyan);
+  color: #0b5d90;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+@media (max-width: 620px) {
+
+  /* ヘッダー下の空白を狭くする */
+  .hero {
+    min-height: auto !important;
+    padding-top: 10px !important;
+    padding-bottom: 18px !important;
+    align-items: flex-start !important;
+  }
+
+  /* 背景画像の全体が見えやすいように調整 */
+  .hero-image {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  /* 白いかぶせを少し弱めて背景を見せる */
+  .hero-shade {
+    background: linear-gradient(
+      90deg,
+      rgba(238,248,255,.72) 0%,
+      rgba(238,248,255,.46) 40%,
+      rgba(238,248,255,.16) 70%,
+      rgba(238,248,255,.04) 100%
+    ) !important;
+  }
+
+  /* 白パネルを少し小さくして右側の背景を見せる */
+  .hero-content {
+    width: calc(100% - 64px) !important;
+    margin: 8px 0 0 16px !important;
+    padding: 18px 18px 18px !important;
+    background: rgba(255,255,255,.60) !important;
+    border: 1px solid rgba(255,255,255,.72) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 10px 26px rgba(4,43,82,.10) !important;
+  }
+
+  /* タイトル */
+  .hero h1 {
+    font-size: min(6.6vw, 28px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.04em !important;
+    white-space: nowrap !important;
+  }
+
+  .hero h1 strong {
+    display: inline !important;
+    font-size: 1.18em !important;
+    white-space: nowrap !important;
+  }
+
+  /* キャッチフレーズ */
+  .hero-catch {
+    margin-top: 14px !important;
+    padding-left: 10px !important;
+    border-left: 4px solid var(--cyan) !important;
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+    color: #0b5d90 !important;
+  }
+
+  /* 日時会場 */
+  .hero-event-info {
+    margin-top: 14px !important;
+    padding-top: 12px !important;
+    border-top: 1px solid rgba(7,95,147,.22) !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* トップ画面の大きい予約ボタンは消す */
+  .hero-booking-button {
+    display: none !important;
+  }
+}
