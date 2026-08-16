@@ -3287,3 +3287,27 @@ html {
     opacity: 0.24;
   }
 }
+/* Ver 150: mobile hero background image off */
+
+@media (max-width: 620px) {
+
+  .hero {
+    background: linear-gradient(
+      180deg,
+      #f7fcff 0%,
+      #eef8fd 100%
+    ) !important;
+  }
+
+  .hero > .hero-image {
+    display: none !important;
+  }
+
+  .hero > .hero-shade {
+    display: none !important;
+  }
+
+  .hero-content {
+    background: rgba(255,255,255,.96) !important;
+  }
+}
