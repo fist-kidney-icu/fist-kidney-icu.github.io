@@ -3453,3 +3453,40 @@ html {
     line-height: 1.5 !important;
   }
 }
+/* Ver 154: mobile full-image hero + one-line project title */
+
+@media (max-width: 620px) {
+
+  /* PC版のイメージ図をスマホ幅に合わせて全体表示 */
+  .hero {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(247,252,255,0.94) 0%,
+        rgba(238,248,253,0.86) 45%,
+        rgba(238,248,253,0.76) 100%
+      ),
+      url("assets/hero-blue-icu.png") !important;
+
+    background-repeat: no-repeat, no-repeat !important;
+    background-size: auto, 100% auto !important;
+    background-position: 0 0, center center !important;
+  }
+
+  .hero > .hero-image {
+    display: none !important;
+  }
+
+  .hero > .hero-shade {
+    display: none !important;
+  }
+
+  /* FIST-腎臓再生ICUプロジェクト を1行に */
+  .eyebrow {
+    width: 100% !important;
+    font-size: min(4.05vw, 16px) !important;
+    line-height: 1.45 !important;
+    letter-spacing: -0.04em !important;
+    white-space: nowrap !important;
+  }
+}
