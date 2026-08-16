@@ -3702,3 +3702,207 @@ html {
     color: #0b5d90 !important;
   }
 }
+/* Ver 160: final mobile hero refinement */
+
+@media (max-width: 620px) {
+
+  /* ---------- HERO 全体 ---------- */
+
+  .hero {
+    background: linear-gradient(
+      180deg,
+      #f7fcff 0%,
+      #eef8fd 100%
+    ) !important;
+  }
+
+  .hero > .hero-image,
+  .hero > .hero-shade {
+    display: none !important;
+  }
+
+  .hero-content {
+    width: calc(100% - 24px) !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 18px 4px 22px !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+
+  /* ---------- ICU画像＋タイトル ---------- */
+
+  .hero-visual-panel {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 1.55 / 1 !important;
+    margin: 14px 0 18px !important;
+
+    overflow: hidden !important;
+    border-radius: 14px !important;
+    background: #eef8fd !important;
+  }
+
+  .hero-visual-panel > img {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    opacity: 0.30 !important;
+    filter: saturate(.72) brightness(1.12) !important;
+  }
+
+  /* 文字を読みやすくする薄い白 */
+  .hero-visual-panel::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+
+    background: linear-gradient(
+      90deg,
+      rgba(248,252,255,.95) 0%,
+      rgba(248,252,255,.84) 48%,
+      rgba(248,252,255,.42) 78%,
+      rgba(248,252,255,.18) 100%
+    ) !important;
+  }
+
+  .hero-visual-copy {
+    position: relative !important;
+    z-index: 2 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    padding: 20px 14px !important;
+  }
+
+
+  /* ---------- 4行を画面幅75%基準で自動調整 ---------- */
+
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-catch-line1,
+  .hero-catch-line2 {
+    display: block !important;
+    width: 75vw !important;
+    max-width: 75vw !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-visual-copy h1 {
+    width: 75vw !important;
+    max-width: 75vw !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+
+  /* 臓器移植に頼らない */
+  .hero-title-line1 {
+    font-size: min(7vw, 29px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.045em !important;
+    color: #08284b !important;
+  }
+
+  /* 未来医療をつくる */
+  .hero-title-line2 {
+    margin-top: 4px !important;
+    font-size: min(8vw, 34px) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.05em !important;
+    color: #0878ba !important;
+  }
+
+  .hero-visual-copy .hero-catch {
+    width: 75vw !important;
+    max-width: 75vw !important;
+
+    margin-top: 18px !important;
+    padding-left: 10px !important;
+
+    border-left: 4px solid var(--cyan) !important;
+    color: #0b5d90 !important;
+    font-weight: 700 !important;
+  }
+
+  /* 腎臓再生のブレークスルーを目指す */
+  .hero-catch-line1 {
+    font-size: min(3.9vw, 16px) !important;
+    line-height: 1.5 !important;
+  }
+
+  /* 医工学による挑戦研究プロジェクト */
+  .hero-catch-line2 {
+    margin-top: 2px !important;
+    font-size: min(3.9vw, 16px) !important;
+    line-height: 1.5 !important;
+  }
+
+
+  /* ---------- 講師 ---------- */
+
+  .hero-speaker-info {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin-top: 0 !important;
+    padding: 16px 2px 4px !important;
+
+    border-top: 1px solid rgba(7,95,147,.20) !important;
+
+    color: #173753 !important;
+    font-size: min(3.65vw, 15px) !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-speaker-name {
+    margin: 0 0 9px !important;
+    color: #062a4e !important;
+  }
+
+  /* 「講師：中村 真人」だけ少し大きく */
+  .hero-speaker-lead {
+    font-size: 1.15em !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+  }
+
+  /* 医師・博士（医学）は通常サイズ */
+  .hero-speaker-credential {
+    margin-left: .5em !important;
+    font-size: 1em !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+
+  /* ---------- 肩書：2文字分インデント ---------- */
+
+  .hero-speaker-roles {
+    margin-top: 6px !important;
+    padding-left: 2em !important;
+  }
+
+  .hero-speaker-roles p {
+    margin: 4px 0 !important;
+    line-height: 1.55 !important;
+  }
+
+  /* 2行目になる所属内の役職をさらに下げる */
+  .hero-speaker-roles .role-sub {
+    padding-left: 1.5em !important;
+    margin-top: 0 !important;
+  }
+
+}
