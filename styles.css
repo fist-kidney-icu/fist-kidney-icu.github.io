@@ -3111,3 +3111,44 @@ html {
     font-size: 11px;
   }
 }
+
+/* Ver 147: mobile title one-line + full navigation */
+
+@media (max-width: 620px) {
+
+  /* タイトルは必ず2行だけにする */
+  .hero h1 {
+    font-size: 27px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.05em !important;
+    white-space: nowrap !important;
+  }
+
+  .hero h1 strong {
+    display: inline;
+    font-size: 1.18em !important;
+    white-space: nowrap !important;
+  }
+
+  /* ナビを横スクロールさせず全部表示 */
+  .site-nav {
+    display: flex !important;
+    width: 100%;
+    gap: 6px;
+    justify-content: space-between;
+    overflow: visible;
+    white-space: nowrap;
+  }
+
+  .site-nav a:not(.nav-cta) {
+    display: inline-block !important;
+    flex: 0 1 auto;
+    font-size: 10px !important;
+  }
+
+  .site-nav .nav-cta {
+    flex: 0 0 auto;
+    padding: 5px 9px !important;
+    font-size: 10px !important;
+  }
+}
