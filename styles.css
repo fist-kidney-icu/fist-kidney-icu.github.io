@@ -3550,3 +3550,68 @@ html {
     font-size: min(4.1vw, 17px) !important;
   }
 }
+/* Ver 156: full-width mobile hero + correct image strip */
+
+@media (max-width: 620px) {
+
+  /* ヒーロー全体をスマホ横幅いっぱいに */
+  .hero-content {
+    width: calc(100% - 24px) !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 18px 4px 22px !important;
+  }
+
+  /* タイトル・キャッチ・講師欄も全幅 */
+  .eyebrow,
+  .hero h1,
+  .hero-catch,
+  .hero-strip-visual,
+  .hero-speaker-info {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* 横長イメージ図 */
+  .hero-strip-visual {
+    margin: 14px 0 16px !important;
+    height: auto !important;
+    aspect-ratio: 4 / 1 !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+    background: #eef8fd !important;
+  }
+
+  .hero-strip-visual img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+
+    /* 4:1の帯をしっかり埋める */
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    opacity: 0.28 !important;
+    filter: saturate(.72) brightness(1.12) !important;
+  }
+
+  /* キャッチフレーズ */
+  .hero-catch {
+    font-size: min(4.2vw, 17px) !important;
+    line-height: 1.5 !important;
+    padding-left: 10px !important;
+  }
+
+  /* 講師情報 */
+  .hero-speaker-info {
+    margin-top: 0 !important;
+    padding: 16px 2px 4px !important;
+    font-size: min(3.75vw, 15px) !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-speaker-name {
+    font-size: min(4.2vw, 17px) !important;
+    line-height: 1.5 !important;
+  }
+}
