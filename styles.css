@@ -5204,3 +5204,82 @@ html {
     z-index: 2 !important;
   }
 }
+/* Ver 188: PC hero full-image translucent overlay + transparent text boxes */
+
+@media (min-width: 621px) {
+
+  /* ===== 1. 文字側の背景はすべて完全透明 ===== */
+
+  .hero-visual-copy,
+  .hero-visual-copy h1,
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-subtitle-text,
+  .hero-visual-copy .eyebrow,
+  .hero-visual-copy .status {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+
+  /* ===== 2. 背景画像と同サイズの白70％BOXを手前に置く ===== */
+
+  .hero {
+    position: relative !important;
+  }
+
+  /* 既存のshadeは使わない */
+  .hero-shade {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background: rgba(255, 255, 255, 0.70) !important;
+
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  /* 背景画像は最背面 */
+  .hero > .hero-image {
+    z-index: 0 !important;
+  }
+
+  /* 文字類は白70％BOXより前面 */
+  .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+
+  /* ===== 3. タイトル幅 ===== */
+
+  .hero-visual-copy h1 {
+    width: 720px !important;
+    max-width: 720px !important;
+    padding: 0 !important;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2 {
+    width: 720px !important;
+    max-width: 720px !important;
+  }
+
+
+  /* ===== 副題もタイトル幅と同じに固定 ===== */
+
+  .hero-subtitle-text {
+    width: 720px !important;
+    max-width: 720px !important;
+    box-sizing: border-box !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
