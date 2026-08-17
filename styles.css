@@ -4928,3 +4928,51 @@ html {
     background: transparent !important;
   }
 }
+/* Ver 183: restore PC title area while keeping narrow image hidden */
+
+@media (min-width: 621px) {
+
+  /* タイトルを載せる領域の高さを明示的に確保 */
+  .hero-visual-panel {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: 300px !important;
+    min-height: 300px !important;
+    background: transparent !important;
+    overflow: visible !important;
+  }
+
+  /* 幅の狭い重複画像だけ消す */
+  .hero-visual-panel > img.hero-visual-image {
+    display: none !important;
+  }
+
+  /* タイトル類を確実に表示 */
+  .hero-visual-copy {
+    position: relative !important;
+    display: block !important;
+    z-index: 3 !important;
+    width: 100% !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .hero-visual-copy .eyebrow,
+  .hero-visual-copy .status,
+  .hero-visual-copy h1,
+  .hero-title-line1,
+  .hero-title-line2 {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 説明BOXも確実に表示 */
+  .hero-subtitle-text {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 4 !important;
+  }
+}
