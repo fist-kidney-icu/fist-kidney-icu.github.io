@@ -5513,3 +5513,25 @@ html {
   }
 
 }
+/* Ver 197: PC speaker profile text slightly larger */
+
+@media (min-width: 621px) {
+
+  /* 講師プロフィール本文 */
+  .speaker-profile-copy p {
+    font-size: 18px !important;
+    line-height: 1.95 !important;
+  }
+
+  /* 専門領域 */
+  .speaker-profile-copy strong {
+    font-size: 18px !important;
+  }
+
+  /* 「もっと詳しいプロフィール」ボタンも少し大きく */
+  .speaker-profile-copy .profile-button-more,
+  .speaker-profile-copy .profile-button {
+    font-size: 15px !important;
+    padding: 11px 20px !important;
+  }
+}
