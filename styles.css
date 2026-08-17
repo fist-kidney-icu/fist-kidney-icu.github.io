@@ -4440,3 +4440,29 @@ html {
     margin: 0 !important;
   }
 }
+/* Ver 169: remove blank space below hero image */
+
+@media (max-width: 620px) {
+
+  /* イメージ領域そのものを短くする */
+  .hero-visual-panel {
+    height: 245px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* 原画全体を維持したまま上寄せ */
+  .hero-visual-panel > img.hero-visual-image {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center top !important;
+
+    transform: none !important;
+  }
+
+  /* 副題は画像の約2行下から */
+  .hero-subtitle-text {
+    margin-top: 24px !important;
+  }
+}
