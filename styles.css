@@ -4732,3 +4732,40 @@ html {
   white-space: nowrap !important;
   writing-mode: horizontal-tb !important;
 }
+/* Ver 176: lower affiliations exactly match FIST affiliations */
+
+.speaker-profile-affiliations-lower,
+.speaker-profile-affiliations-lower p {
+  font-family: inherit !important;
+  font-size: clamp(14px, 1.22vw, 17px) !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1.48 !important;
+  letter-spacing: normal !important;
+  color: inherit !important;
+}
+
+.speaker-profile-affiliations-lower p {
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.speaker-profile-affiliations-lower .speaker-role-sub {
+  padding-left: 2em !important;
+}
+
+
+/* smartphone */
+@media (max-width: 760px) {
+
+  .speaker-profile-affiliations-lower,
+  .speaker-profile-affiliations-lower p {
+    font-family: inherit !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    line-height: 1.48 !important;
+    letter-spacing: normal !important;
+  }
+}
