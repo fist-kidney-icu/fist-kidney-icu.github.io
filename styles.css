@@ -4318,3 +4318,85 @@ html {
     font-weight: 400 !important;
   }
 }
+/* Ver 167: hero image position up + subtitle auto-wrap */
+
+@media (max-width: 620px) {
+
+  /* 上部ヒーロー全体 */
+  .hero-visual-panel {
+    position: relative !important;
+    width: 100% !important;
+    height: 305px !important;
+    margin: -10px 0 6px !important;
+    overflow: hidden !important;
+    background: #eef8fd !important;
+    border-radius: 0 !important;
+  }
+
+  /* イメージ図を復活・少し上へ */
+  .hero-visual-panel > img.hero-visual-image {
+    display: block !important;
+    visibility: visible !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center top !important;
+
+    transform: scale(0.94) translateY(-10px) !important;
+    transform-origin: center top !important;
+
+    opacity: 0.30 !important;
+    filter: saturate(.80) brightness(1.10) !important;
+    z-index: 0 !important;
+  }
+
+  /* 文字の後ろにうっすら白をかける */
+  .hero-visual-panel::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: linear-gradient(
+      90deg,
+      rgba(247,252,255,.84) 0%,
+      rgba(247,252,255,.68) 58%,
+      rgba(247,252,255,.22) 100%
+    ) !important;
+  }
+
+  /* 画像の上に文字を載せる */
+  .hero-visual-copy {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 8px 8px 0 !important;
+  }
+
+  /* 副題説明文：自然改行＋フォント少し大きめ */
+  .hero-subtitle-text {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 8px 0 0 !important;
+    padding: 0 4px !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    color: #173753 !important;
+
+    font-size: 17px !important;
+    line-height: 1.85 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+}
