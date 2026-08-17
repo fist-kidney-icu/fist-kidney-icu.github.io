@@ -5367,3 +5367,25 @@ html {
     padding: 22px 26px !important;
   }
 }
+/* Ver 191: PC subtitle width + background image height */
+
+@media (min-width: 621px) {
+
+  /* 1）副題BOXを約1文字分だけ狭く */
+  .hero-subtitle-text {
+    width: 690px !important;
+    max-width: 690px !important;
+  }
+
+  /* 2）背景イメージの縦幅を95％に縮小して中央配置 */
+  .hero > .hero-image {
+    width: 100% !important;
+    height: 95% !important;
+
+    top: 2.5% !important;
+    bottom: auto !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
