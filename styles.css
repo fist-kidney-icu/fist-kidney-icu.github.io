@@ -4653,3 +4653,57 @@ html {
     line-height: 1.45 !important;
   }
 }
+/* Ver 174: keep speaker name horizontal */
+
+.speaker-profile-name-row {
+  display: flex !important;
+  align-items: baseline !important;
+  flex-wrap: nowrap !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+/* 中村真人は絶対に1行 */
+.speaker-profile-name {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: max-content !important;
+
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  writing-mode: horizontal-tb !important;
+
+  margin: 0 !important;
+}
+
+/* 資格は小さくして1行 */
+.speaker-profile-qualification {
+  flex: 0 1 auto !important;
+
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  writing-mode: horizontal-tb !important;
+
+  margin: 0 !important;
+}
+
+@media (max-width: 620px) {
+
+  .speaker-profile-name-row {
+    gap: 5px !important;
+  }
+
+  .speaker-profile-name {
+    white-space: nowrap !important;
+    min-width: max-content !important;
+  }
+
+  .speaker-profile-qualification {
+    font-size: min(2.8vw, 11px) !important;
+    white-space: nowrap !important;
+  }
+}
