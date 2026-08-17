@@ -5074,3 +5074,71 @@ html {
     background: rgba(255, 255, 255, 0.50) !important;
   }
 }
+/* Ver 186: PC white backgrounds only for title and subtitle */
+
+@media (min-width: 621px) {
+
+  /* ========================================
+     FIST表記・特別講演会・開催決定
+     → 半透明白の背景から完全に外す
+     ======================================== */
+
+  .hero-visual-copy {
+    background: transparent !important;
+  }
+
+  .hero-visual-copy::before,
+  .hero-visual-copy::after {
+    background: transparent !important;
+  }
+
+  .hero-visual-copy .eyebrow {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* 「開催決定」も白背景をなくす */
+  .hero-visual-copy .status {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+
+  /* ========================================
+     メインタイトル2行だけ
+     半透明白 50%
+     ======================================== */
+
+  .hero-visual-copy h1 {
+    width: 760px !important;
+    max-width: 760px !important;
+
+    /* 背景を文字幅に揃えるため余分な左右paddingをなくす */
+    padding: 8px 0 !important;
+
+    background: rgba(255, 255, 255, 0.50) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2 {
+    background: transparent !important;
+  }
+
+
+  /* ========================================
+     副題BOX
+     タイトルと同じ横幅・半透明白50%
+     ======================================== */
+
+  .hero-subtitle-text {
+    width: 760px !important;
+    max-width: 760px !important;
+    box-sizing: border-box !important;
+
+    background: rgba(255, 255, 255, 0.50) !important;
+
+    box-shadow: none !important;
+  }
+}
