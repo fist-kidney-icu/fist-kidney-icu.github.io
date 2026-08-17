@@ -4782,3 +4782,17 @@ html {
   <span>・元（財）神奈川科学技術アカデミー</span>
   <span class="speaker-role-sub">中村バイオプリンティングプロジェクトリーダー</span>
 </div>
+/* Ver 177: lower affiliations use exactly same style as FIST affiliations */
+
+.speaker-profile-affiliations-lower {
+  width: 100% !important;
+  margin-top: 14px !important;
+}
+
+.speaker-profile-affiliations-lower span {
+  display: block !important;
+}
+
+.speaker-profile-affiliations-lower .speaker-role-sub {
+  padding-left: 2em !important;
+}
