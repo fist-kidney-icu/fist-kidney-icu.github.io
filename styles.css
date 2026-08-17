@@ -5283,3 +5283,59 @@ html {
     box-shadow: none !important;
   }
 }
+/* Ver 189: remove all extra translucent white blocks on PC */
+
+@media (min-width: 621px) {
+
+  /* 以前の hero-visual-panel 上の白レイヤーを完全に削除 */
+  .hero-visual-panel::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+  }
+
+  /* 以前作った hero-content の半透明BOXも完全に削除 */
+  .hero-content::before,
+  .hero-content::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+  }
+
+  /* 文字BOXには一切背景を持たせない */
+  .hero-visual-panel,
+  .hero-visual-copy,
+  .hero-visual-copy h1,
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-subtitle-text,
+  .hero-visual-copy .eyebrow,
+  .hero-visual-copy .status {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* 残す半透明白はこれ1枚だけ */
+  .hero > .hero-shade {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+
+    background: rgba(255, 255, 255, 0.70) !important;
+
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .hero > .hero-image {
+    z-index: 0 !important;
+  }
+
+  .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+}
