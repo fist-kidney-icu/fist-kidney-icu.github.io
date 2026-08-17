@@ -5421,3 +5421,33 @@ html {
     z-index: 2 !important;
   }
 }
+/* Ver 193: PC hero title slightly larger + no unwanted wrapping */
+
+@media (min-width: 621px) {
+
+  .hero-visual-copy h1 {
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2 {
+    display: block !important;
+
+    width: max-content !important;
+    max-width: none !important;
+
+    /* タイトルを少し大きく */
+    font-size: clamp(44px, 5.7vw, 72px) !important;
+
+    line-height: 1.12 !important;
+
+    /* 各行の途中では絶対に改行しない */
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+  }
+
+  .hero-title-line2 {
+    margin-top: 7px !important;
+  }
+}
