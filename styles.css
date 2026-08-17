@@ -4976,3 +4976,63 @@ html {
     z-index: 4 !important;
   }
 }
+/* Ver 184: PC subtitle box final alignment */
+
+@media (min-width: 621px) {
+
+  /* タイトル部分は内容の高さだけにする */
+  .hero-visual-panel {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  .hero-visual-copy {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* タイトル幅 */
+  .hero-visual-copy h1 {
+    width: 760px !important;
+    max-width: 760px !important;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2 {
+    width: 760px !important;
+    max-width: 760px !important;
+  }
+
+  /* 説明BOX */
+  .hero-subtitle-text {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    /* ① タイトルと同じ横幅 */
+    width: 760px !important;
+    max-width: 760px !important;
+    box-sizing: border-box !important;
+
+    /* ② タイトル下に1.5文字分の間隔 */
+    margin: 1.5em 0 0 !important;
+
+    padding: 22px 26px !important;
+
+    /* ③ 白・透明度50％ */
+    background: rgba(255, 255, 255, 0.50) !important;
+
+    border: 1px solid rgba(38, 151, 205, 0.42) !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+
+    font-size: clamp(28px, 2.2vw, 32px) !important;
+    line-height: 1.48 !important;
+    font-weight: 600 !important;
+  }
+}
