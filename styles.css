@@ -5480,3 +5480,30 @@ html {
     margin-top: 7px !important;
   }
 }
+/* Ver 194: PC eyebrow + status emphasis */
+
+@media (min-width: 621px) {
+
+  /* FIST-腎臓再生ICUプロジェクト／特別講演会 を120％に */
+  .hero-visual-copy .eyebrow {
+    font-size: 120% !important;
+    line-height: 1.45 !important;
+  }
+
+  /* 開催決定を150％、赤文字・白塗り・赤枠に */
+  .hero-visual-copy .status {
+    font-size: 150% !important;
+    line-height: 1.2 !important;
+
+    color: #c62828 !important;
+    background: #ffffff !important;
+
+    border: 2px solid #c62828 !important;
+    border-radius: 999px !important;
+
+    padding: 6px 16px !important;
+
+    font-weight: 800 !important;
+    box-shadow: none !important;
+  }
+}
