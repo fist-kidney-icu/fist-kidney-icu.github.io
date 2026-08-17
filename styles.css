@@ -4863,3 +4863,48 @@ html {
     letter-spacing: 0 !important;
   }
 }
+/* Ver 181: PC hero subtitle positioning + hide top speaker block */
+
+@media (min-width: 621px) {
+
+  .hero-content {
+    position: relative !important;
+    padding-bottom: 190px !important;
+  }
+
+  /* タイトルは2行固定 */
+  .hero-visual-copy h1 .hero-title-line1,
+  .hero-visual-copy h1 .hero-title-line2 {
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  /* 説明BOXをタイトルから十分離して配置 */
+  .hero-subtitle-text {
+    position: absolute !important;
+    left: 0 !important;
+    top: 390px !important;
+
+    width: 760px !important;
+    max-width: 760px !important;
+
+    margin: 0 !important;
+    padding: 22px 26px !important;
+
+    background: rgba(255,255,255,.86) !important;
+    border: 1px solid rgba(38,151,205,.42) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 8px 22px rgba(13,78,119,.10) !important;
+
+    color: #155d8b !important;
+
+    font-size: clamp(28px, 2.2vw, 32px) !important;
+    line-height: 1.48 !important;
+    font-weight: 600 !important;
+  }
+
+  /* PCトップの講師ブロックは削除 */
+  .hero-speaker-info {
+    display: none !important;
+  }
+}
