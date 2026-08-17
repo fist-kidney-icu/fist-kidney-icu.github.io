@@ -4500,3 +4500,113 @@ html {
     line-height: 1.62 !important;
   }
 }
+/* Ver 172: speaker profile layout refinement */
+
+.speaker-profile-heading {
+  align-items: flex-start !important;
+}
+
+.speaker-profile-heading > img,
+.speaker-profile-photo {
+  align-self: flex-start !important;
+  margin-top: 0 !important;
+}
+
+/* 名前＋資格 */
+.speaker-profile-name-row {
+  display: flex !important;
+  align-items: baseline !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+}
+
+.speaker-profile-name {
+  flex: 0 1 auto !important;
+  margin: 0 !important;
+}
+
+/* 医師・博士（医学）は小さくして1行固定 */
+.speaker-profile-qualification {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+}
+
+/* 写真横の肩書 */
+.speaker-profile-affiliations-top {
+  margin-top: 8px !important;
+}
+
+.speaker-profile-affiliations-top span {
+  display: block !important;
+  line-height: 1.5 !important;
+}
+
+/* 写真の下からBOX全幅になる肩書 */
+.speaker-profile-affiliations-lower {
+  width: 100% !important;
+  margin: 16px 0 18px !important;
+  padding: 0 !important;
+
+  color: #173753 !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  font-weight: 600 !important;
+}
+
+.speaker-profile-affiliations-lower p {
+  margin: 4px 0 !important;
+  padding: 0 !important;
+}
+
+/* 最終行をタブ2つ分くらい右へ */
+.speaker-profile-affiliations-lower .speaker-role-sub {
+  padding-left: 2.5em !important;
+  margin-top: 0 !important;
+}
+
+
+/* ---------- smartphone ---------- */
+
+@media (max-width: 620px) {
+
+  .speaker-profile-heading {
+    align-items: flex-start !important;
+  }
+
+  .speaker-profile-heading > img,
+  .speaker-profile-photo {
+    margin-top: 0 !important;
+    align-self: flex-start !important;
+  }
+
+  .speaker-profile-name-row {
+    display: flex !important;
+    align-items: baseline !important;
+    flex-wrap: nowrap !important;
+    gap: 7px !important;
+  }
+
+  .speaker-profile-qualification {
+    font-size: clamp(11px, 3.1vw, 13px) !important;
+    white-space: nowrap !important;
+  }
+
+  .speaker-profile-affiliations-top span {
+    line-height: 1.45 !important;
+  }
+
+  .speaker-profile-affiliations-lower {
+    width: 100% !important;
+    margin-top: 14px !important;
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  .speaker-profile-affiliations-lower .speaker-role-sub {
+    padding-left: 2.5em !important;
+  }
+}
