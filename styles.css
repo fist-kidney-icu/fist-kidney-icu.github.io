@@ -5542,3 +5542,21 @@ html {
     padding: 11px 20px !important;
   }
 }
+/* Ver 198: speaker profile body exact font size */
+
+@media (min-width: 621px) {
+
+  .speaker-profile-copy .speaker-profile-continuous {
+    font-size: 17px !important;
+    line-height: 1.95 !important;
+  }
+
+  .speaker-profile-copy .speaker-expertise {
+    font-size: 17px !important;
+    line-height: 1.75 !important;
+  }
+
+  .speaker-profile-copy .speaker-expertise strong {
+    font-size: 17px !important;
+  }
+}
