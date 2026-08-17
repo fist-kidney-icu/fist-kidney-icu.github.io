@@ -5527,7 +5527,7 @@ html {
   /* 講師プロフィール本文 */
   .speaker-profile-copy p {
     font-size: 16px !important;
-    line-height: 1.95 !important;
+    line-height: 1.75 !important;
   }
 
   /* 専門領域 */
@@ -5547,12 +5547,12 @@ html {
 @media (min-width: 621px) {
 
   .speaker-profile-copy .speaker-profile-continuous {
-    font-size: 17px !important;
+    font-size: 16px !important;
     line-height: 1.7 !important;
   }
 
   .speaker-profile-copy .speaker-expertise {
-    font-size: 17px !important;
+    font-size: 16px !important;
     line-height: 1.7 !important;
   }
 
