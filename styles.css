@@ -4908,3 +4908,23 @@ html {
     display: none !important;
   }
 }
+/* Ver 182: PC hero clean background */
+
+@media (min-width: 621px) {
+
+  /* 説明BOXの白いもやを外す */
+  .hero-subtitle-text {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* PCでは、上に重なっている幅の狭い背景画像を消す */
+  .hero-visual-panel > img.hero-visual-image {
+    display: none !important;
+  }
+
+  /* 画像を消した後、パネル自体の背景も透明にする */
+  .hero-visual-panel {
+    background: transparent !important;
+  }
+}
