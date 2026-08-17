@@ -4816,3 +4816,50 @@ html {
     font-weight: 600 !important;
   }
 }
+/* Ver 179: PC hero two-line title + larger subtitle box */
+
+@media (min-width: 621px) {
+
+  /* ===== メインタイトルを必ず2行に ===== */
+
+  .hero-visual-copy h1 {
+    width: max-content !important;
+    max-width: 760px !important;
+    margin: 0 !important;
+  }
+
+  .hero-visual-copy h1 .hero-title-line1,
+  .hero-visual-copy h1 .hero-title-line2 {
+    display: block !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-visual-copy h1 .hero-title-line2 {
+    margin-top: 7px !important;
+  }
+
+
+  /* ===== タイトル下の説明BOX ===== */
+
+  .hero-subtitle-text {
+    width: min(860px, 78%) !important;
+    max-width: 860px !important;
+
+    margin: 24px 0 0 !important;
+    padding: 18px 22px !important;
+
+    background: rgba(255, 255, 255, 0.84) !important;
+    border: 1px solid rgba(38, 151, 205, 0.42) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 8px 22px rgba(13, 78, 119, 0.10) !important;
+
+    color: #155d8b !important;
+
+    font-size: clamp(20px, 1.55vw, 23px) !important;
+    line-height: 1.55 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+  }
+}
