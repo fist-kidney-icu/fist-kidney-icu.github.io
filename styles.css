@@ -4707,3 +4707,28 @@ html {
     white-space: nowrap !important;
   }
 }
+/* Ver 175: speaker name and qualification on separate lines */
+
+.speaker-profile-name-row {
+  display: block !important;
+  width: 100% !important;
+}
+
+.speaker-profile-name {
+  display: block !important;
+  margin: 0 0 3px !important;
+
+  white-space: nowrap !important;
+  writing-mode: horizontal-tb !important;
+}
+
+.speaker-profile-qualification {
+  display: block !important;
+  margin: 0 !important;
+
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+
+  white-space: nowrap !important;
+  writing-mode: horizontal-tb !important;
+}
