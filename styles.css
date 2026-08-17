@@ -4235,3 +4235,86 @@ html {
     font-weight: 700 !important;
   }
 }
+/* Ver 166: restore full hero image + match subtitle body font */
+
+@media (max-width: 620px) {
+
+  /* ===== 上部イメージ図 ===== */
+
+  .hero-visual-panel {
+    position: relative !important;
+    width: 100% !important;
+    height: 360px !important;
+    margin: 2px 0 0 !important;
+    overflow: hidden !important;
+    background: #eef8fd !important;
+    border-radius: 0 !important;
+  }
+
+  /* 原画全体をトリミングせず表示 */
+  .hero-visual-panel > img.hero-visual-image {
+    display: block !important;
+    visibility: visible !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    opacity: 0.34 !important;
+    filter: saturate(.80) brightness(1.08) !important;
+
+    z-index: 0 !important;
+  }
+
+  /* 画像の上に薄い白をかける */
+  .hero-visual-panel::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+
+    background: linear-gradient(
+      90deg,
+      rgba(247,252,255,.82) 0%,
+      rgba(247,252,255,.62) 55%,
+      rgba(247,252,255,.20) 100%
+    ) !important;
+  }
+
+  /* 文字を画像より前へ */
+  .hero-visual-copy {
+    position: relative !important;
+    z-index: 2 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    padding: 10px 8px 18px !important;
+  }
+
+
+  /* ===== 副題説明文 ===== */
+
+  .hero-subtitle-text {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 18px 4px 20px !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    color: #173753 !important;
+
+    /* 下の説明本文に合わせる */
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    font-weight: 400 !important;
+  }
+}
