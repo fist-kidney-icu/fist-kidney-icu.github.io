@@ -4012,3 +4012,95 @@ html {
     padding: 0 !important;
   }
 }
+/* Ver.164: subtitle larger + image only behind upper title area */
+
+@media (max-width: 620px) {
+
+  /* 上部ヒーロー領域 */
+  .hero-visual-panel {
+    position: relative !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    padding-bottom: 8px !important;
+  }
+
+  /* 既存の画像要素は消して、背景画像として使う */
+  .hero-visual-panel img,
+  .hero-visual-panel .hero-image,
+  .hero-visual-panel .hero-visual-image {
+    display: none !important;
+  }
+
+  /* 背景イメージは、タイトル群の後ろだけに薄く表示 */
+  .hero-visual-panel::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    height: 300px;
+    background-image: url("assets/hero-blue-icu.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 92% auto;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* 文字を画像より前面へ */
+  .hero-visual-copy,
+  .hero-visual-copy * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* タイトル2行を80%幅基準で自動調整 */
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-visual-copy h1 strong {
+    width: 80vw !important;
+    max-width: 80vw !important;
+    font-size: min(8vw, 34px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.045em !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-title-line2 {
+    margin-top: 0 !important;
+  }
+
+  /* 「開催決定」とメインタイトルの間を少し詰める */
+  .hero-status {
+    margin-bottom: 10px !important;
+  }
+
+  /* 説明文：BOXを消して全幅表示、文字を大きく */
+  .hero-subtitle-box {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 12px 0 0 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-subtitle-text,
+  .hero-subtitle-box,
+  .hero-subtitle-box p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 12px 0 0 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #155d8b !important;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    font-weight: 700 !important;
+  }
+}
