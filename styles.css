@@ -4400,3 +4400,43 @@ html {
     overflow-wrap: break-word !important;
   }
 }
+/* Ver 168: tighten image-subtitle gap + force natural wrapping */
+
+@media (max-width: 620px) {
+
+  /* 図の下の余白を詰める */
+  .hero-visual-panel {
+    margin-bottom: 0 !important;
+  }
+
+  /* 副題説明文を図のすぐ下へ */
+  .hero-subtitle-text {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 12px 0 0 !important;
+    padding: 0 4px 0 !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+
+    /* 自然改行 */
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+
+    /* 「講演について」の本文に近い見え方 */
+    font-size: 17px !important;
+    line-height: 1.75 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+
+    color: #173753 !important;
+  }
+
+  /* p要素由来の余分な上下余白も消す */
+  .hero-subtitle-text p {
+    margin: 0 !important;
+  }
+}
