@@ -4610,3 +4610,46 @@ html {
     padding-left: 2.5em !important;
   }
 }
+/* Ver 173: unify lower affiliations with FIST affiliation style */
+
+.speaker-profile-affiliations-lower {
+  width: 100% !important;
+  margin: 14px 0 18px !important;
+  padding: 0 !important;
+
+  /* 写真横のFIST肩書と同じ書式 */
+  color: inherit !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: 1.5 !important;
+}
+
+.speaker-profile-affiliations-lower p {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: 1.5 !important;
+}
+
+/* 最終行だけ約2文字分インデント */
+.speaker-profile-affiliations-lower .speaker-role-sub {
+  padding-left: 2em !important;
+  margin: 0 !important;
+}
+
+
+/* smartphone */
+@media (max-width: 620px) {
+
+  .speaker-profile-affiliations-lower,
+  .speaker-profile-affiliations-lower p {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: 1.45 !important;
+  }
+}
