@@ -4796,3 +4796,23 @@ html {
 .speaker-profile-affiliations-lower .speaker-role-sub {
   padding-left: 2em !important;
 }
+/* Ver 178: PC hero subtitle box */
+
+@media (min-width: 621px) {
+
+  .hero-subtitle-text {
+    width: min(760px, 72%) !important;
+    margin: 18px 0 0 !important;
+    padding: 14px 18px !important;
+
+    background: rgba(255, 255, 255, 0.78) !important;
+    border: 1px solid rgba(38, 151, 205, 0.40) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 6px 18px rgba(13, 78, 119, 0.08) !important;
+
+    color: #155d8b !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    font-weight: 600 !important;
+  }
+}
