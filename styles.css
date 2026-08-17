@@ -5504,3 +5504,12 @@ html {
     display: none !important;
   }
 }
+/* Ver 196: gap below status */
+
+@media (min-width: 621px) {
+
+  .hero-visual-copy .status {
+    margin-bottom: clamp(44px, 5.7vw, 72px) !important;
+  }
+
+}
