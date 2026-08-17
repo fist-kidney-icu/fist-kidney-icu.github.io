@@ -5625,3 +5625,22 @@ html {
     line-height: 1.65 !important;
   }
 }
+/* Ver 203: WHO SHOULD ATTEND visually match Lecture Guide */
+
+@media (min-width: 621px) {
+
+  .audience-card .audience-list li {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+
+    /* Lecture Guideと同じ濃い文字色 */
+    color: #102a43 !important;
+  }
+
+  .audience-card .audience-note {
+    font-size: 18px !important;
+    color: #102a43 !important;
+  }
+}
