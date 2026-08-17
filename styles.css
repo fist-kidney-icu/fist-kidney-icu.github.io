@@ -5576,3 +5576,20 @@ html {
     height: auto;
   }
 }
+/* Ver 200: Lecture Guide illustration slightly larger */
+
+@media (min-width: 621px) {
+
+  .guide-illustration {
+    width: 100%;
+    margin-top: 18px;
+    text-align: right;
+  }
+
+  .guide-illustration img {
+    display: inline-block;
+    width: 240px;
+    max-width: 46%;
+    height: auto;
+  }
+}
