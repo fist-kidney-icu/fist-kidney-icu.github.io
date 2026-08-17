@@ -5357,17 +5357,7 @@ html {
     background: #ffffff !important;
     background-color: #ffffff !important;
 
-    /* 丸枠をはっきり表示 */
-    border: 2px solid rgba(8, 120, 201, 0.55) !important;
-    border-radius: 16px !important;
-
-    /* 少しだけ立体感 */
-    box-shadow: 0 8px 22px rgba(4, 43, 82, 0.12) !important;
-
-    padding: 22px 26px !important;
-  }
-}
-/* Ver 191: PC subtitle width + background image height */
+    /* 丸枠をはっきり表示 */+ background image height */
 
 @media (min-width: 621px) {
 
@@ -5387,5 +5377,47 @@ html {
 
     object-fit: cover !important;
     object-position: center center !important;
+  }
+}
+/* Ver 192: PC background image + white overlay both 95% height */
+
+@media (min-width: 621px) {
+
+  /* 背景イメージ */
+  .hero > .hero-image {
+    position: absolute !important;
+
+    top: 2.5% !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    height: 95% !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    z-index: 0 !important;
+  }
+
+  /* 白70％の半透明レイヤーも画像と完全に同じサイズ */
+  .hero > .hero-shade {
+    position: absolute !important;
+
+    top: 2.5% !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    height: 95% !important;
+
+    background: rgba(255, 255, 255, 0.70) !important;
+
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  /* 文字はその前面 */
+  .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
   }
 }
