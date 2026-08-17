@@ -4480,3 +4480,23 @@ html {
     padding-top: 0 !important;
   }
 }
+/* Ver 171: title line spacing + subtitle tighter leading */
+
+@media (max-width: 620px) {
+
+  /* メインタイトル2行の行間を少し広げる */
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-visual-copy h1 strong {
+    line-height: 1.18 !important;
+  }
+
+  .hero-title-line2 {
+    margin-top: 6px !important;
+  }
+
+  /* 副題説明文の行間を少し狭める */
+  .hero-subtitle-text {
+    line-height: 1.62 !important;
+  }
+}
