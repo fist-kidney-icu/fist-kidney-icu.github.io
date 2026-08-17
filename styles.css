@@ -3955,3 +3955,60 @@ html {
     transform: none !important;
   }
 }
+/* Ver 163: larger 80vw title + rounded subtitle box */
+
+@media (max-width: 620px) {
+
+  /* タイトル領域を75% → 80%へ */
+  .hero-visual-copy h1,
+  .hero-title-line1,
+  .hero-title-line2 {
+    width: 80vw !important;
+    max-width: 80vw !important;
+  }
+
+  /* 2行とも同じ大きさで、一段大きく */
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-visual-copy h1 strong {
+    font-size: min(7.8vw, 33px) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.045em !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-title-line2 {
+    margin-top: 3px !important;
+  }
+
+  /* タイトル＋説明が入るよう画像領域を少し縦長に */
+  .hero-visual-panel {
+    aspect-ratio: 1.30 / 1 !important;
+  }
+
+  /* 説明文の角丸ボックス */
+  .hero-subtitle-box {
+    width: 80vw !important;
+    max-width: 80vw !important;
+
+    margin-top: 16px !important;
+    padding: 11px 13px 12px !important;
+
+    background: rgba(255, 255, 255, 0.78) !important;
+    border: 1px solid rgba(38, 151, 205, 0.45) !important;
+    border-radius: 12px !important;
+
+    box-shadow: 0 4px 12px rgba(13, 78, 119, 0.08) !important;
+
+    color: #0b5d90 !important;
+    font-size: min(4.05vw, 17px) !important;
+    line-height: 1.38 !important;
+    font-weight: 700 !important;
+  }
+
+  .hero-subtitle-box p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
