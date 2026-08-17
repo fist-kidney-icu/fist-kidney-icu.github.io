@@ -5036,3 +5036,41 @@ html {
     font-weight: 600 !important;
   }
 }
+/* Ver 185: PC title white overlay width + true 1.5-title-character gap */
+
+@media (min-width: 621px) {
+
+  /* 背景画像全体にかかっている白いレイヤーを外す */
+  .hero-shade {
+    display: none !important;
+  }
+
+  /* タイトル2行だけに半透明白を置く */
+  .hero-visual-copy h1 {
+    width: 760px !important;
+    max-width: 760px !important;
+    box-sizing: border-box !important;
+
+    padding: 12px 18px !important;
+
+    background: rgba(255, 255, 255, 0.50) !important;
+    border-radius: 10px !important;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2 {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  /* 説明BOX：
+     タイトル文字サイズの1.5文字分だけ下へ離す */
+  .hero-subtitle-text {
+    width: 760px !important;
+    max-width: 760px !important;
+
+    margin-top: clamp(54px, 8.1vw, 102px) !important;
+
+    background: rgba(255, 255, 255, 0.50) !important;
+  }
+}
