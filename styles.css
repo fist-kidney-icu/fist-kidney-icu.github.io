@@ -5526,13 +5526,13 @@ html {
 
   /* 講師プロフィール本文 */
   .speaker-profile-copy p {
-    font-size: 17px !important;
+    font-size: 16px !important;
     line-height: 1.95 !important;
   }
 
   /* 専門領域 */
   .speaker-profile-copy strong {
-    font-size: 17px !important;
+    font-size: 16px !important;
   }
 
   /* 「もっと詳しいプロフィール」ボタンも少し大きく */
