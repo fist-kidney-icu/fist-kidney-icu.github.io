@@ -5142,3 +5142,65 @@ html {
     box-shadow: none !important;
   }
 }
+/* Ver 187: PC hero independent translucent white overlay */
+
+@media (min-width: 621px) {
+
+  /* 背景画像全体への白いモヤは使わない */
+  .hero-shade {
+    display: none !important;
+  }
+
+  /* 文字そのものの背景はすべて塗りつぶしなし */
+  .hero-visual-copy,
+  .hero-visual-copy h1,
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-subtitle-text {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* FIST・特別講演会・開催決定も背景なし */
+  .hero-visual-copy .eyebrow,
+  .hero-visual-copy .status {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* 背景画像の上に独立した半透明白BOXを1枚重ねる */
+  .hero-content::before {
+    content: "" !important;
+
+    position: absolute !important;
+    left: 0 !important;
+
+    /* メインタイトル付近から開始 */
+    top: 145px !important;
+
+    /* タイトルと副題を包む幅 */
+    width: 760px !important;
+
+    /* タイトル＋間隔＋副題を包む高さ */
+    height: 355px !important;
+
+    background: rgba(255, 255, 255, 0.70) !important;
+
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: none !important;
+
+    z-index: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* 文字は半透明BOXより前面へ */
+  .hero-visual-panel,
+  .hero-visual-copy,
+  .hero-subtitle-text {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+}
