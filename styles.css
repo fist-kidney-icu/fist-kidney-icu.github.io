@@ -90,7 +90,14 @@ button, .secondary-button { font: inherit; }
 .speaker-profile-name { margin: 8px 0 4px; color: var(--navy); font-size: clamp(23px, 2.5vw, 32px); font-weight: 800; }
 .speaker-profile-role { margin: 0; color: var(--blue); font-size: 13px; font-weight: 700; line-height: 1.7; }
 .speaker-profile-role span { display: block; }
-.speaker-profile-copy p { margin: 0 0 22px; color: #34546c; font-size: 16px; line-height: 2; }
+.speaker-profile-copy p {
+  font-size: 17px !important;
+  line-height: 1.95 !important;
+}
+
+.speaker-profile-copy strong {
+  font-size: 17px !important;
+}
 .profile-button-more { padding: 11px 20px; }
 .speaker-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; padding: 65px; background: #fff; border-radius: 24px; box-shadow: var(--shadow); }
 .speaker-section > p { margin: 0; color: #34546c; font-size: 17px; }
