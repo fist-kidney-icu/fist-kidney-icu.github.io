@@ -5339,54 +5339,14 @@ html {
     z-index: 2 !important;
   }
 }
-/* Ver 190: PC subtitle solid white rounded box + left alignment */
+/* Ver 195: PC HERO consolidated clean version */
 
 @media (min-width: 621px) {
 
-  .hero-subtitle-text {
-    /* タイトルと左揃え */
-    margin-left: 0 !important;
-    left: 0 !important;
+  /* ===== 背景画像 ===== */
 
-    /* タイトル幅に合わせる */
-    width: 720px !important;
-    max-width: 720px !important;
-    box-sizing: border-box !important;
-
-    /* 不透明白 */
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-
-    /* 丸枠をはっきり表示 */+ background image height */
-
-@media (min-width: 621px) {
-
-  /* 1）副題BOXを約1文字分だけ狭く */
-  .hero-subtitle-text {
-    width: 690px !important;
-    max-width: 690px !important;
-  }
-
-  /* 2）背景イメージの縦幅を95％に縮小して中央配置 */
-  .hero > .hero-image {
-    width: 100% !important;
-    height: 95% !important;
-
-    top: 2.5% !important;
-    bottom: auto !important;
-
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-}
-/* Ver 192: PC background image + white overlay both 95% height */
-
-@media (min-width: 621px) {
-
-  /* 背景イメージ */
   .hero > .hero-image {
     position: absolute !important;
-
     top: 2.5% !important;
     bottom: auto !important;
 
@@ -5399,8 +5359,9 @@ html {
     z-index: 0 !important;
   }
 
-  /* 白70％の半透明レイヤーも画像と完全に同じサイズ */
+  /* 背景画像と同じ大きさの白70％レイヤー */
   .hero > .hero-shade {
+    display: block !important;
     position: absolute !important;
 
     top: 2.5% !important;
@@ -5409,91 +5370,49 @@ html {
     width: 100% !important;
     height: 95% !important;
 
-    background: rgba(255, 255, 255, 0.70) !important;
+    background: rgba(255,255,255,0.70) !important;
 
     z-index: 1 !important;
     pointer-events: none !important;
   }
 
-  /* 文字はその前面 */
   .hero-content {
     position: relative !important;
     z-index: 2 !important;
   }
-}
-/* Ver 193: PC hero title slightly larger + no unwanted wrapping */
 
-@media (min-width: 621px) {
 
-  .hero-visual-copy h1 {
-    width: max-content !important;
-    max-width: none !important;
+  /* ===== 幅の狭い重複画像はPCでは非表示 ===== */
+
+  .hero-visual-panel > img.hero-visual-image {
+    display: none !important;
   }
 
-  .hero-title-line1,
-  .hero-title-line2 {
-    display: block !important;
-
-    width: max-content !important;
-    max-width: none !important;
-
-    /* タイトルを少し大きく */
-    font-size: clamp(44px, 5.7vw, 72px) !important;
-
-    line-height: 1.12 !important;
-
-    /* 各行の途中では絶対に改行しない */
-    white-space: nowrap !important;
-    word-break: keep-all !important;
+  .hero-visual-panel::after,
+  .hero-content::before,
+  .hero-content::after {
+    content: none !important;
+    display: none !important;
   }
 
-  .hero-title-line2 {
-    margin-top: 7px !important;
-  }
-}/* Ver 193: PC hero title slightly larger + no unwanted wrapping */
 
-@media (min-width: 621px) {
+  /* ===== 講演会名 ===== */
 
-  .hero-visual-copy h1 {
-    width: max-content !important;
-    max-width: none !important;
-  }
-
-  .hero-title-line1,
-  .hero-title-line2 {
-    display: block !important;
-
-    width: max-content !important;
-    max-width: none !important;
-
-    /* タイトルを少し大きく */
-    font-size: clamp(44px, 5.7vw, 72px) !important;
-
-    line-height: 1.12 !important;
-
-    /* 各行の途中では絶対に改行しない */
-    white-space: nowrap !important;
-    word-break: keep-all !important;
-  }
-
-  .hero-title-line2 {
-    margin-top: 7px !important;
-  }
-}
-/* Ver 194: PC eyebrow + status emphasis */
-
-@media (min-width: 621px) {
-
-  /* FIST-腎臓再生ICUプロジェクト／特別講演会 を120％に */
   .hero-visual-copy .eyebrow {
-    font-size: 120% !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    /* 従来の約120％ */
+    font-size: clamp(21px, 2.15vw, 27px) !important;
     line-height: 1.45 !important;
+    font-weight: 800 !important;
   }
 
-  /* 開催決定を150％、赤文字・白塗り・赤枠に */
+
+  /* ===== 開催決定 ===== */
+
   .hero-visual-copy .status {
-    font-size: 150% !important;
-    line-height: 1.2 !important;
+    display: inline-block !important;
 
     color: #c62828 !important;
     background: #ffffff !important;
@@ -5501,9 +5420,87 @@ html {
     border: 2px solid #c62828 !important;
     border-radius: 999px !important;
 
-    padding: 6px 16px !important;
-
+    font-size: 18px !important;
+    line-height: 1.2 !important;
     font-weight: 800 !important;
+
+    padding: 6px 16px !important;
+    margin-bottom: 12px !important;
+
     box-shadow: none !important;
+  }
+
+
+  /* ===== メインタイトル ===== */
+
+  .hero-visual-copy h1 {
+    width: max-content !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2 {
+    display: block !important;
+
+    width: max-content !important;
+    max-width: none !important;
+
+    font-size: clamp(44px, 5.7vw, 72px) !important;
+    line-height: 1.12 !important;
+
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+
+    background: transparent !important;
+  }
+
+  .hero-title-line2 {
+    margin-top: 7px !important;
+  }
+
+
+  /* ===== 副題BOX ===== */
+
+  .hero-subtitle-text {
+    position: relative !important;
+
+    /* 修正済みだった狭い幅を復活 */
+    width: 690px !important;
+    max-width: 690px !important;
+
+    /* タイトルと左揃え */
+    margin-left: 0 !important;
+    left: 0 !important;
+
+    /* タイトル文字との間隔 */
+    margin-top: 1.5em !important;
+
+    box-sizing: border-box !important;
+
+    /* 不透明白BOX */
+    background: #ffffff !important;
+
+    border: 2px solid rgba(8,120,201,0.55) !important;
+    border-radius: 16px !important;
+
+    box-shadow: 0 8px 22px rgba(4,43,82,0.12) !important;
+
+    padding: 22px 26px !important;
+
+    font-size: clamp(28px,2.2vw,32px) !important;
+    line-height: 1.48 !important;
+    font-weight: 600 !important;
+  }
+
+
+  /* ===== PCトップの講師ブロックは非表示 ===== */
+
+  .hero-speaker-info {
+    display: none !important;
   }
 }
