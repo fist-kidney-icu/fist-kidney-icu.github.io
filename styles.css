@@ -5560,3 +5560,19 @@ html {
     font-size: 17px !important;
   }
 }
+/* Ver 199: Lecture Guide illustration */
+
+@media (min-width: 621px) {
+  .guide-illustration {
+    width: 100%;
+    margin-top: 16px;
+    text-align: right;
+  }
+
+  .guide-illustration img {
+    display: inline-block;
+    width: 210px;
+    max-width: 42%;
+    height: auto;
+  }
+}
